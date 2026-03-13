@@ -12,7 +12,7 @@ interface QA {
 const qaTr: QA[] = [
   {
     question: "Ben Kimim?",
-    answer: "Sedat İrtaş — Full-Stack Developer & AI Systems Engineer. React/Next.js, Node.js, TypeScript, PostgreSQL ile 13+ üretim projesi geliştirdim. 60+ AI ajan orkestrasyonu, Telegram otomasyon botları, gerçek zamanlı veri işleme platformları ve fraud analitik sistemleri kurdum. Workintech Full-Stack Bootcamp mezunuyum. Commencis'in agentic AI vizyonuna tam uyumlu bir mühendislik profili sunuyorum."
+    answer: "Sedat İrtaş — Endüstri Mühendisi & Full-Stack AI Developer. 2024'te endüstri mühendisliği mezuniyetim ve Workintech Full-Stack Bootcamp'i tamamladım. Veri analitiği ve süreç optimizasyonu altyapımı yazılımla birleştirerek 13+ üretim projesi, 60+ AI ajan orkestrasyonu, Telegram otomasyon botları, fraud analitik sistemleri ve VPS otomasyon platformları kurdum. Endüstri mühendisliğinin analitik yaklaşımıyla Commencis'in agentic AI vizyonuna tam uyumlu bir profil sunuyorum."
   },
   {
     question: "Commencis'e Ne Katabilirim?",
@@ -35,7 +35,7 @@ const qaTr: QA[] = [
 const qaEn: QA[] = [
   {
     question: "Who Am I?",
-    answer: "Sedat Irtas — Full-Stack Developer & AI Systems Engineer. Built 13+ production projects with React/Next.js, Node.js, TypeScript, PostgreSQL. Orchestrated 60+ AI agents, built Telegram automation bots, real-time data processing platforms, and fraud analytics systems. Workintech Full-Stack Bootcamp graduate. Offering an engineering profile perfectly aligned with Commencis's agentic AI vision."
+    answer: "Sedat Irtas — Industrial Engineer & Full-Stack AI Developer. Graduated in Industrial Engineering and completed Workintech Full-Stack Bootcamp in 2024. Combining data analytics and process optimization background with software to build 13+ production projects, 60+ AI agent orchestrations, Telegram automation bots, fraud analytics systems, and VPS automation platforms. Offering a profile that merges industrial engineering's analytical approach with Commencis's agentic AI vision."
   },
   {
     question: "What Can I Bring to Commencis?",
