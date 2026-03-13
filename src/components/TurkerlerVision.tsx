@@ -566,7 +566,7 @@ export default function TurkerlerVision() {
                 <div key={p.name} className="p-2 rounded-lg bg-indigo-500/5 border border-indigo-500/10 text-center">
                   <div className="text-[10px] font-medium truncate">{p.name}</div>
                   <div className="text-xs font-bold text-indigo-400">{p.capacity}</div>
-                  <div className="text-[9px] text-foreground/25">{p.location}</div>
+                  <div className="text-[9px] text-foreground/50">{p.location}</div>
                 </div>
               ))}
             </div>
@@ -585,7 +585,7 @@ export default function TurkerlerVision() {
                 <div key={p.name} className="p-2 rounded-lg bg-cyan-500/5 border border-cyan-500/10 text-center">
                   <div className="text-[10px] font-medium">{p.name}</div>
                   <div className="text-xs font-bold text-cyan-400">{p.capacity}</div>
-                  <div className="text-[9px] text-foreground/25">{p.location}</div>
+                  <div className="text-[9px] text-foreground/50">{p.location}</div>
                 </div>
               ))}
             </div>
@@ -604,7 +604,7 @@ export default function TurkerlerVision() {
                 <div key={p.name} className="p-2 rounded-lg bg-purple-500/5 border border-purple-500/10 text-center">
                   <div className="text-[10px] font-medium">{p.name}</div>
                   <div className="text-xs font-bold text-purple-400">{p.capacity}</div>
-                  <div className="text-[9px] text-foreground/25">{p.location}</div>
+                  <div className="text-[9px] text-foreground/50">{p.location}</div>
                 </div>
               ))}
             </div>
@@ -618,7 +618,7 @@ export default function TurkerlerVision() {
           viewport={{ once: true }}
           className="mb-16 p-6 rounded-xl bg-surface border border-border"
         >
-          <h3 className="text-sm font-mono text-foreground/40 mb-6 tracking-wider">
+          <h3 className="text-sm font-mono text-foreground/60 mb-6 tracking-wider">
             {t.turkerler.growth}
           </h3>
           <div className="space-y-3">
@@ -648,7 +648,7 @@ export default function TurkerlerVision() {
                     </span>
                   </motion.div>
                 </div>
-                <div className="w-48 shrink-0 text-[10px] text-foreground/25 hidden lg:block">
+                <div className="w-48 shrink-0 text-[10px] text-foreground/50 hidden lg:block">
                   {g.detail}
                 </div>
               </motion.div>
@@ -714,7 +714,7 @@ export default function TurkerlerVision() {
             <span className="text-2xl">{"\uD83D\uDE80"}</span>
             <div>
               <h3 className="font-bold">{t.turkerler.vedasTitle}</h3>
-              <p className="text-xs text-foreground/55">
+              <p className="text-xs text-foreground/70">
                 {vedasData.coverage} &middot; {vedasData.subscribers} &middot; {vedasData.area}
               </p>
             </div>
@@ -810,7 +810,7 @@ export default function TurkerlerVision() {
                     <div className="text-[10px] font-mono text-red-400 font-semibold mb-2 tracking-wider">{t.turkerler.currentIssues}</div>
                     <ul className="space-y-1.5">
                       {item.problems.map((p) => (
-                        <li key={p} className="text-[11px] text-foreground/55 flex items-start gap-2">
+                        <li key={p} className="text-[11px] text-foreground/75 flex items-start gap-2">
                           <span className="text-red-400/70 shrink-0">&times;</span>
                           {p}
                         </li>
@@ -821,7 +821,7 @@ export default function TurkerlerVision() {
                     <div className="text-[10px] font-mono text-primary font-semibold mb-2 tracking-wider">{t.turkerler.aiSolution}</div>
                     <ul className="space-y-1.5">
                       {item.solutions.map((s) => (
-                        <li key={s} className="text-[11px] text-foreground/65 flex items-start gap-2">
+                        <li key={s} className="text-[11px] text-foreground/80 flex items-start gap-2">
                           <span className="text-primary shrink-0">&check;</span>
                           {s}
                         </li>
