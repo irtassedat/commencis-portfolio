@@ -16,7 +16,7 @@ const qaTr: QA[] = [
   },
   {
     question: "Commencis'e Ne Katabilirim?",
-    answer: "1) Agentic AI & Multi-Agent Sistemler — 60+ AI ajan orkestrasyonu deneyimim var, Commencis'in LLM vizyonunu otonom iş süreçlerine taşıyabilirim. 2) Full-Stack Platform — Multi-tenant SaaS (176+ endpoint) ve enterprise API deneyimim İşBank IsCep gibi projelere katkı sağlar. 3) Veri Mühendisliği — 20+ kaynaktan gerçek zamanlı veri toplama, Dataroid analitiğiyle entegre çalışabilecek pipeline'lar. 4) Cloud & DevOps — Docker, AWS, CI/CD deneyimim AWS Premier Tier ekosistemine uyumlu."
+    answer: "Somut katkılarım: 1) Agentic AI — 60+ AI ajan orkestre ettim, Commencis LLM'i otonom iş süreçlerine taşıyabilirim. Fraud tespiti, müşteri segmentasyonu, otomatik raporlama. 2) Full-Stack Platform — 176+ endpoint'li multi-tenant SaaS geliştirdim, İşBank İsCep gibi projelerin backend'ine katkı sağlarım. 3) Otomasyon — 15+ Telegram bot ve 12+ VPS sunucu otomasyonu ile Commencis'in iç süreçlerini hızlandırabilirim. 4) Endüstri Mühendisliği — Veri analitiği ve süreç optimizasyonu perspektifim, sadece kod yazmak değil, iş süreçlerini de optimize etmemi sağlar."
   },
   {
     question: "Öne Çıkan Projelerim?",
@@ -28,7 +28,7 @@ const qaTr: QA[] = [
   },
   {
     question: "Neden Commencis?",
-    answer: "Commencis, Türkiye'nin tek kendi LLM'ini geliştiren dijital dönüşüm şirketi. AWS Premier Tier Partner statüsü, 15+ yıllık İşBank partnerliği ve bootstrapped büyüme modeliyle benzersiz. Benim agentic AI, multi-agent orkestrasyon ve full-stack platform deneyimim, Commencis'in 2026 vizyonuyla — LEAP Riyadh genişlemesi, Arapça LLM, 5G servisleri — mükemmel uyum sağlıyor. Burada gerçek etki yaratabileceğime inanıyorum."
+    answer: "Üç somut neden: 1) Türkiye'nin tek Türkçe LLM geliştiren şirketi — benim NLP ve agentic AI odağımla birebir örtüşüyor. 2) AWS Premier Tier Partner — Türkiye'de sadece 2 şirket bu statüde, cloud ve DevOps deneyimime uygun bir ekosistem. 3) İşBank, Pegasus, Turkcell gibi müşteri portföyü — enterprise ölçekte etki yaratma fırsatı. Ayrıca bootstrapped büyüme modeli, startup çevikliği ile enterprise gücünü birleştiriyor — benim çalışma tarzıma çok uygun."
   },
 ];
 
@@ -39,7 +39,7 @@ const qaEn: QA[] = [
   },
   {
     question: "What Can I Bring to Commencis?",
-    answer: "1) Agentic AI & Multi-Agent Systems — Experience orchestrating 60+ AI agents, can extend Commencis LLM vision to autonomous workflows. 2) Full-Stack Platform — Multi-tenant SaaS (176+ endpoints) and enterprise API experience applicable to projects like IsBank IsCep. 3) Data Engineering — Real-time data collection from 20+ sources, pipelines integrable with Dataroid analytics. 4) Cloud & DevOps — Docker, AWS, CI/CD experience compatible with AWS Premier Tier ecosystem."
+    answer: "Concrete contributions: 1) Agentic AI — Orchestrated 60+ AI agents, can extend Commencis LLM to autonomous workflows. Fraud detection, customer segmentation, automated reporting. 2) Full-Stack Platform — Built multi-tenant SaaS with 176+ endpoints, can contribute to backends like IsBank IsCep. 3) Automation — 15+ Telegram bots and 12+ VPS server automation to accelerate Commencis's internal processes. 4) Industrial Engineering — Data analytics and process optimization perspective enables me to optimize business processes, not just write code."
   },
   {
     question: "Featured Projects?",
@@ -51,7 +51,7 @@ const qaEn: QA[] = [
   },
   {
     question: "Why Commencis?",
-    answer: "Commencis is Turkey's only digital transformation company developing its own LLM. With AWS Premier Tier Partner status, 15+ year IsBank partnership, and bootstrapped growth, it's unique. My agentic AI, multi-agent orchestration, and full-stack platform experience perfectly aligns with Commencis's 2026 vision — LEAP Riyadh expansion, Arabic LLM, 5G services. I believe I can create real impact here."
+    answer: "Three concrete reasons: 1) Turkey's only company developing a Turkish LLM — directly aligns with my NLP and agentic AI focus. 2) AWS Premier Tier Partner — only 2 companies in Turkey have this status, an ecosystem fitting my cloud and DevOps experience. 3) Client portfolio like IsBank, Pegasus, Turkcell — opportunity to create impact at enterprise scale. Plus, the bootstrapped growth model combines startup agility with enterprise power — perfectly fits my work style."
   },
 ];
 

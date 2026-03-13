@@ -46,7 +46,7 @@ function GridBackground() {
 const metricColors = ["#6366f1", "#0ea5e9", "#8b5cf6", "#10b981"];
 
 export default function Hero() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <GridBackground />
@@ -58,6 +58,15 @@ export default function Hero() {
             <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/15 bg-primary/5 mb-6">
               <span className="relative flex h-1.5 w-1.5"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" /><span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" /></span>
               <span className="text-xs text-primary/80">{t.hero.badge}</span>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.05 }} className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Sİ</span>
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-foreground/80">Sedat İrtaş</div>
+                <div className="text-[10px] text-foreground/35 font-mono">{lang === "tr" ? "Endüstri Mühendisi × Full-Stack AI Developer" : "Industrial Engineer × Full-Stack AI Developer"}</div>
+              </div>
             </motion.div>
             <motion.h1 initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.15] tracking-tight mb-5">
               <span className="text-foreground/90">{t.hero.titleA}</span><br /><span className="text-gradient">{t.hero.titleB}</span>
@@ -93,6 +102,15 @@ export default function Hero() {
               <div className="p-3 rounded-lg bg-primary/5 border border-primary/10">
                 <div className="text-[9px] text-primary/50 uppercase tracking-wider mb-1">{t.hero.data.ipo.title}</div>
                 <div className="text-xs text-foreground/50">{t.hero.data.ipo.desc}</div>
+              </div>
+              <div className="mt-3 p-3 rounded-lg bg-accent/5 border border-accent/10">
+                <div className="text-[9px] text-accent/50 uppercase tracking-wider mb-1">{lang === "tr" ? "BENİM KATKIM" : "MY CONTRIBUTION"}</div>
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="text-[9px] text-foreground/40"><span className="text-accent font-bold">60+</span> {lang === "tr" ? "AI Ajan" : "AI Agents"}</div>
+                  <div className="text-[9px] text-foreground/40"><span className="text-accent font-bold">13+</span> {lang === "tr" ? "Üretim Projesi" : "Production Projects"}</div>
+                  <div className="text-[9px] text-foreground/40"><span className="text-accent font-bold">15+</span> {lang === "tr" ? "Otomasyon Botu" : "Automation Bots"}</div>
+                  <div className="text-[9px] text-foreground/40"><span className="text-accent font-bold">176+</span> {lang === "tr" ? "API Endpoint" : "API Endpoints"}</div>
+                </div>
               </div>
             </div>
             <div className="mt-3 flex items-center justify-end gap-2 text-[9px] text-foreground/15"><span>{t.hero.data.source}</span></div>

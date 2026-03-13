@@ -18,7 +18,7 @@ const marketSegmentsEN = [
   { segment: "Retail & FMCG", growth: 15, marketSize: "$1.2B", color: "#10b981", note: "Unilever, BSH digital channel optimization" },
 ];
 
-/* Digital transformation companies */
+/* Digital transformation companies — estimated figures based on public data & industry reports */
 const competitorsTR = [
   { name: "Commencis", employees: 500, projects: 120, revenue: "~$85M", growth: "15%", highlight: true },
   { name: "Etiya", employees: 1600, projects: 200, revenue: "~$380M", growth: "12%", highlight: false },
@@ -52,7 +52,7 @@ const aiBenchmarksEN = [
   { metric: "Digital Transformation Market", value: "$15B+", source: "Turkey 2025", detail: "5% of GDP, target 10% (2030)" },
 ];
 
-/* Commencis financial estimates */
+/* Commencis financial estimates — based on ~450 employees × industry avg revenue/employee */
 const financialsTR = [
   { year: "2022", revenue: "55", grossProfit: "22", margin: "40", unit: "milyon $" },
   { year: "2023", revenue: "66", grossProfit: "28", margin: "42.4", unit: "milyon $" },
@@ -69,15 +69,15 @@ const financialsEN = [
 const financialSummaryTR = [
   { label: "AWS Sertifika", value: "100+", sub: "Premier Tier Partner" },
   { label: "Müşteri Ülkesi", value: "20+", sub: "Global erişim" },
-  { label: "Çalışan Büyümesi", value: "+51%", sub: "2022 → 2023" },
-  { label: "Bootstrapped", value: "$0 dış yatırım", sub: "Organik büyüme" },
+  { label: "Benim Uyumum", value: "AI + Full-Stack", sub: "Agentic AI odağı" },
+  { label: "Meta-Kanıt", value: "Bu Portfolyo", sub: "Next.js 16 + TS ile yazıldı" },
 ];
 
 const financialSummaryEN = [
   { label: "AWS Certifications", value: "100+", sub: "Premier Tier Partner" },
   { label: "Client Countries", value: "20+", sub: "Global reach" },
-  { label: "Employee Growth", value: "+51%", sub: "2022 → 2023" },
-  { label: "Bootstrapped", value: "$0 ext. funding", sub: "Organic growth" },
+  { label: "My Fit", value: "AI + Full-Stack", sub: "Agentic AI focus" },
+  { label: "Meta-Proof", value: "This Portfolio", sub: "Built with Next.js 16 + TS" },
 ];
 
 export default function MarketAnalysis() {
@@ -224,8 +224,8 @@ export default function MarketAnalysis() {
             </div>
             <p className="text-xs text-foreground/40 leading-relaxed">
               {lang === "tr"
-                ? "Commencis LLM + İşBank İsCep ortaklığı, Türkiye'nin en büyük mobil bankacılık platformunu (14.5M kullanıcı) AI-native hale getiriyor. GPT-4 Turbo seviyesinde Türkçe doğruluk (%98+), on-premise deployment ile KVKK/BDDK uyumu, ve bankacılık-spesifik fine-tuning ile sektörde benzersiz bir konum. Bu ortaklık modeli Burgan Bank, DenizBank ve bölgesel bankalara ölçeklenebilir."
-                : "Commencis LLM + IsBank IsCep partnership is making Turkey's largest mobile banking platform (14.5M users) AI-native. GPT-4 Turbo level Turkish accuracy (98%+), KVKK/BDDK compliance with on-premise deployment, and banking-specific fine-tuning create a unique market position. This partnership model scales to Burgan Bank, DenizBank, and regional banks."}
+                ? "Commencis LLM + İşBank İsCep ortaklığı, Türkiye'nin en büyük mobil bankacılık platformunu (14.5M kullanıcı) AI-native hale getiriyor. Benim 60+ AI ajan orkestrasyon deneyimim ve fraud analitik sistemlerim, bu LLM'in otonom müşteri hizmetleri, dolandırıcılık tespiti ve kişiselleştirilmiş bankacılık deneyimine genişletilmesinde doğrudan uygulanabilir."
+                : "Commencis LLM + IsBank IsCep partnership is making Turkey's largest mobile banking platform (14.5M users) AI-native. My 60+ AI agent orchestration experience and fraud analytics systems are directly applicable to extending this LLM into autonomous customer service, fraud detection, and personalized banking experiences."}
             </p>
           </div>
         </motion.div>
