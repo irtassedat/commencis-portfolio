@@ -807,22 +807,22 @@ export default function TurkerlerVision() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <div className="text-[10px] font-mono text-red-400 font-semibold mb-2 tracking-wider">{t.turkerler.currentIssues}</div>
+                    <div className="text-[11px] font-mono text-red-400 font-bold mb-2 tracking-wider">{t.turkerler.currentIssues}</div>
                     <ul className="space-y-1.5">
                       {item.problems.map((p) => (
-                        <li key={p} className="text-[11px] text-foreground/75 flex items-start gap-2">
-                          <span className="text-red-400/70 shrink-0">&times;</span>
+                        <li key={p} className="text-[11px] text-foreground/90 flex items-start gap-2">
+                          <span className="text-red-400 shrink-0">&#10007;</span>
                           {p}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <div className="text-[10px] font-mono text-primary font-semibold mb-2 tracking-wider">{t.turkerler.aiSolution}</div>
+                    <div className="text-[11px] font-mono text-indigo-400 font-bold mb-2 tracking-wider">{t.turkerler.aiSolution}</div>
                     <ul className="space-y-1.5">
                       {item.solutions.map((s) => (
-                        <li key={s} className="text-[11px] text-foreground/80 flex items-start gap-2">
-                          <span className="text-primary shrink-0">&check;</span>
+                        <li key={s} className="text-[11px] text-foreground/90 flex items-start gap-2">
+                          <span className="text-indigo-400 shrink-0">&#10003;</span>
                           {s}
                         </li>
                       ))}
