@@ -38,7 +38,7 @@ const aiBenchmarksTR = [
   { metric: "Müşteri Deneyimi İyileştirme", value: "%35-45", source: "Deloitte Digital", detail: "AI kişiselleştirme ile NPS artışı" },
   { metric: "Geliştirme Hızı Artışı", value: "%40-60", source: "McKinsey Tech 2024", detail: "AI destekli yazılım geliştirme ile" },
   { metric: "Operasyonel Maliyet Azalma", value: "%25-35", source: "Gartner 2025", detail: "Agentic AI otomasyon ile" },
-  { metric: "Türkçe NLP Doğruluğu", value: "%98+", source: "Commencis LLM", detail: "GPT-4 Turbo seviyesinde, on-premise" },
+  { metric: "Türkçe NLP Doğruluğu", value: "9.8/10", source: "Commencis LLM (Mistral 7B)", detail: "Apache 2.0 lisanslı, on-premise deployment" },
   { metric: "Cloud Maliyet Optimizasyonu", value: "%30-50", source: "AWS Well-Architected", detail: "Cloud-native migrasyon ile" },
   { metric: "Dijital Dönüşüm Pazarı", value: "$15B+", source: "Türkiye 2025", detail: "GDP'nin %5'i, hedef %10 (2030)" },
 ];
@@ -47,7 +47,7 @@ const aiBenchmarksEN = [
   { metric: "Customer Experience Improvement", value: "35-45%", source: "Deloitte Digital", detail: "NPS increase with AI personalization" },
   { metric: "Development Speed Increase", value: "40-60%", source: "McKinsey Tech 2024", detail: "With AI-powered software development" },
   { metric: "Operational Cost Reduction", value: "25-35%", source: "Gartner 2025", detail: "With Agentic AI automation" },
-  { metric: "Turkish NLP Accuracy", value: "98%+", source: "Commencis LLM", detail: "GPT-4 Turbo level, on-premise" },
+  { metric: "Turkish NLP Accuracy", value: "9.8/10", source: "Commencis LLM (Mistral 7B)", detail: "Apache 2.0 licensed, on-premise deployment" },
   { metric: "Cloud Cost Optimization", value: "30-50%", source: "AWS Well-Architected", detail: "With cloud-native migration" },
   { metric: "Digital Transformation Market", value: "$15B+", source: "Turkey 2025", detail: "5% of GDP, target 10% (2030)" },
 ];

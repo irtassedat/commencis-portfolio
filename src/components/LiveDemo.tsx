@@ -24,11 +24,11 @@ function useAnimatedNumber(target: number, duration: number = 2000) {
 }
 
 const projects = [
-  { name: "İşBank İsCep", type: "Mobil Bankacılık", cap: "14.5M kullanıcı", status: "online" as const, eff: 98, color: "#6366f1" },
-  { name: "Pegasus Airlines", type: "Web & Mobil", cap: "30M yolcu/yıl", status: "online" as const, eff: 94, color: "#0ea5e9" },
+  { name: "İşBank İsCep", type: "Mobil Bankacılık", cap: "14.5M kullanıcı, 750+ fonksiyon", status: "online" as const, eff: 98, color: "#6366f1" },
+  { name: "Pegasus Airlines", type: "Web & Mobil", cap: "70M+ dijital kullanıcı/yıl", status: "online" as const, eff: 94, color: "#0ea5e9" },
   { name: "Turkcell Süper App", type: "Süper Uygulama", cap: "35M kullanıcı", status: "online" as const, eff: 91, color: "#8b5cf6" },
   { name: "Burgan Bank ON", type: "Dijital Banka", cap: "2M kullanıcı", status: "online" as const, eff: 89, color: "#6366f1" },
-  { name: "Commencis LLM v2", type: "Türkçe AI", cap: "Fine-tuning", status: "warning" as const, eff: 76, color: "#f59e0b" },
+  { name: "Commencis LLM v2", type: "Türkçe AI", cap: "Mistral 7B fine-tuned", status: "warning" as const, eff: 76, color: "#f59e0b" },
   { name: "Unilever CX", type: "Omnichannel", cap: "B2B + B2C", status: "online" as const, eff: 87, color: "#10b981" },
   { name: "Cloud Camp 2026", type: "Eğitim", cap: "AWS Cert", status: "online" as const, eff: 100, color: "#0ea5e9" },
   { name: "LEAP 2026 Riyadh", type: "Etkinlik", cap: "Nisan 2026", status: "maintenance" as const, eff: 0, color: "#f59e0b" },
@@ -41,7 +41,9 @@ const alertsTr = [
   { time: "13:58", type: "warning", msg: "Turkcell Süper App — Push notification delivery rate %94.2'ye düştü. FCM token yenileme job'ı önerildi." },
   { time: "13:42", type: "info", msg: "Burgan Bank ON — Yeni müşteri onboarding akışı canlıya alındı. AI KYC doğrulama süresi: 12sn (önceki: 3dk)." },
   { time: "13:30", type: "info", msg: "AWS Maliyet Raporu — Mart ayı cloud harcaması %8 altında bütçe. Reserved Instance önerisi: yıllık $45K tasarruf." },
-  { time: "13:15", type: "success", msg: "Haftalık CX skoru raporu oluşturuldu. Ortalama NPS: 72 (+3 önceki haftaya göre). En yüksek: İsCep (NPS 84)." },
+  { time: "13:15", type: "success", msg: "Haftalık CX skoru raporu oluşturuldu. Ortalama NPS: 72 (+3 önceki haftaya göre). En yüksek: İsCep (NPS 84, 15 ödül)." },
+  { time: "13:00", type: "info", msg: "Kontent.ai entegrasyonu — AI içerik yönetimi modülü aktif. Headless CMS ile çok kanallı içerik dağıtımı devrede." },
+  { time: "12:45", type: "success", msg: "AWS Partner of the Year 2024 — Commencis, Türkiye'nin ilk ve tek AWS Premier Tier Partner'ı olarak ödüllendirildi." },
 ];
 
 const alertsEn = [
@@ -51,19 +53,21 @@ const alertsEn = [
   { time: "13:58", type: "warning", msg: "Turkcell Super App — Push notification delivery rate dropped to 94.2%. FCM token refresh job recommended." },
   { time: "13:42", type: "info", msg: "Burgan Bank ON — New customer onboarding flow went live. AI KYC verification time: 12s (previous: 3min)." },
   { time: "13:30", type: "info", msg: "AWS Cost Report — March cloud spend 8% under budget. Reserved Instance recommendation: $45K annual savings." },
-  { time: "13:15", type: "success", msg: "Weekly CX score report generated. Average NPS: 72 (+3 vs. previous week). Highest: IsCep (NPS 84)." },
+  { time: "13:15", type: "success", msg: "Weekly CX score report generated. Average NPS: 72 (+3 vs. previous week). Highest: IsCep (NPS 84, 15 awards)." },
+  { time: "13:00", type: "info", msg: "Kontent.ai integration — AI content management module active. Omnichannel content distribution via headless CMS enabled." },
+  { time: "12:45", type: "success", msg: "AWS Partner of the Year 2024 — Commencis recognized as Turkey's first and only AWS Premier Tier Partner." },
 ];
 
 const cxMetricsTr = [
   { label: "Toplam Kullanıcı", value: "85M+", trend: "+1.2M bu ay" },
-  { label: "Ortalama NPS", value: "72", trend: "+3 önceki aya göre" },
+  { label: "Ortalama NPS", value: "72", trend: "+3 önceki aya göre | İsCep: 15 ödül" },
   { label: "API Uptime", value: "%99.97", trend: "Son 90 gün" },
   { label: "Ortalama Yanıt", value: "142ms", trend: "P99: 380ms" },
 ];
 
 const cxMetricsEn = [
   { label: "Total Users", value: "85M+", trend: "+1.2M this month" },
-  { label: "Average NPS", value: "72", trend: "+3 vs. previous month" },
+  { label: "Average NPS", value: "72", trend: "+3 vs. previous month | IsCep: 15 awards" },
   { label: "API Uptime", value: "99.97%", trend: "Last 90 days" },
   { label: "Avg. Response", value: "142ms", trend: "P99: 380ms" },
 ];

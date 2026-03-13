@@ -6,7 +6,7 @@ import { useLang } from "@/lib/i18n";
 /* ───── PRODUCT LINES ───── */
 const productLinesTr = {
   wind: [
-    { name: "Commencis LLM", capacity: "Türkçe AI", location: "On-Premise", status: "GPT-4 Seviye" },
+    { name: "Commencis LLM", capacity: "Türkçe AI — Mistral 7B tabanlı, Apache 2.0 lisanslı, on-premise deployment. AWS G5 instance'larda eğitilmiş. Bankacılık terminolojisinde Türkçe doğruluk skoru 9.8/10.", location: "On-Premise", status: "GPT-4 Seviye" },
     { name: "AI Framework", capacity: "Enterprise AI", location: "Cloud/On-Prem", status: "Modüler" },
     { name: "Commence Bot", capacity: "Chatbot", location: "Çok Kanallı", status: "NLP" },
     { name: "finbyte", capacity: "Fintech", location: "PFM/BaaS", status: "Bankacılık" },
@@ -25,7 +25,7 @@ const productLinesTr = {
 
 const productLinesEn = {
   wind: [
-    { name: "Commencis LLM", capacity: "Turkish AI", location: "On-Premise", status: "GPT-4 Level" },
+    { name: "Commencis LLM", capacity: "Turkish AI — Mistral 7B based, Apache 2.0 licensed, on-premise deployment. Trained on AWS G5 instances. Turkish accuracy score 9.8/10 in banking terminology.", location: "On-Premise", status: "GPT-4 Level" },
     { name: "AI Framework", capacity: "Enterprise AI", location: "Cloud/On-Prem", status: "Modular" },
     { name: "Commence Bot", capacity: "Chatbot", location: "Multi-Channel", status: "NLP" },
     { name: "finbyte", capacity: "Fintech", location: "PFM/BaaS", status: "Banking" },
@@ -46,7 +46,7 @@ const productLinesEn = {
 const megaProjectsTr = [
   {
     name: "İşBank İsCep Platformu",
-    capacity: "14.5M Kullanıcı",
+    capacity: "14.5M Kullanıcı, 750+ Bankacılık Fonksiyonu",
     investment: "World's Best Mobile Banking",
     status: "Canlı",
     color: "#6366f1",
@@ -58,11 +58,11 @@ const megaProjectsTr = [
       "Günde 2M+ API çağrısı, %99.99 uptime",
     ],
     aiValue:
-      "Commencis LLM ile Türkçe bankacılık asistanı: müşteri sorgularının %85'i AI ile çözülüyor. NPS 84 ile sektör lideri.",
+      "Commencis LLM (Mistral 7B fine-tuned, Türkçe skor 9.8/10) ile AI-native bankacılık. 9M tekil dijital müşteri Dataroid ile analiz edilmektedir.",
   },
   {
     name: "Pegasus Airlines Dijital",
-    capacity: "30M Yolcu/Yıl",
+    capacity: "70M+ Dijital Kullanıcı/Yıl, 500K+ Günlük Aktif",
     investment: "Web & Mobil",
     status: "Canlı",
     color: "#0ea5e9",
@@ -71,6 +71,7 @@ const megaProjectsTr = [
       "Uçtan uca dijital deneyim: arama, satın alma, check-in, boarding",
       "A/B test odaklı sürekli optimizasyon — %23 dönüşüm artışı",
       "Air Astana ve Transavia'ya genişletilen platform mimarisi",
+      "Altın Örümcek 'Yılın En İyi Mobil Uygulaması' 2024 ödüllü",
     ],
     aiValue:
       "Dinamik fiyatlama AI ve kişiselleştirilmiş teklif motoru ile ancillary gelirde %18 artış. Real-time koltuk optimizasyonu.",
@@ -141,7 +142,7 @@ const megaProjectsTr = [
 const megaProjectsEn = [
   {
     name: "IsBank IsCep Platform",
-    capacity: "14.5M Users",
+    capacity: "14.5M Users, 750+ Banking Functions",
     investment: "World's Best Mobile Banking",
     status: "Live",
     color: "#6366f1",
@@ -153,11 +154,11 @@ const megaProjectsEn = [
       "2M+ daily API calls, 99.99% uptime",
     ],
     aiValue:
-      "Turkish banking assistant with Commencis LLM: 85% of customer queries resolved by AI. Sector-leading NPS of 84.",
+      "Commencis LLM (Mistral 7B fine-tuned, Turkish score 9.8/10) for AI-native banking. 9M unique digital customers analyzed via Dataroid.",
   },
   {
     name: "Pegasus Airlines Digital",
-    capacity: "30M Passengers/Year",
+    capacity: "70M+ Digital Users/Year, 500K+ Daily Active",
     investment: "Web & Mobile",
     status: "Live",
     color: "#0ea5e9",
@@ -166,6 +167,7 @@ const megaProjectsEn = [
       "End-to-end digital experience: search, purchase, check-in, boarding",
       "Continuous A/B test-driven optimization — 23% conversion increase",
       "Platform architecture extended to Air Astana and Transavia",
+      "Altin Orumcek 'Best Mobile App of the Year' 2024 award winner",
     ],
     aiValue:
       "Dynamic pricing AI and personalized offer engine yielding 18% increase in ancillary revenue. Real-time seat optimization.",
@@ -485,7 +487,7 @@ const growthPhasesTr = [
   { label: "Monitise Satın Alma", mw: "2014", pct: 50, color: "#0ea5e9", detail: "Global fintech genişlemesi" },
   { label: "Fiserv Dönemi", mw: "2017", pct: 65, color: "#8b5cf6", detail: "Enterprise fintech olgunlaşması" },
   { label: "Commencis Kuruluş", mw: "2018", pct: 80, color: "#10b981", detail: "Bağımsız dijital dönüşüm şirketi" },
-  { label: "LLM & AWS Premier", mw: "2024-25", pct: 100, color: "#f59e0b", detail: "Kendi AI modeli + AWS Premier Tier Partner" },
+  { label: "LLM & AWS Premier", mw: "2024-25", pct: 100, color: "#f59e0b", detail: "Kendi AI modeli + AWS Premier Tier Partner. AWS Consulting Partner of the Year Turkey 2024. Kontent.ai ortaklığı, Commence-Assist AI platform" },
 ];
 
 const growthPhasesEn = [
@@ -494,7 +496,7 @@ const growthPhasesEn = [
   { label: "Monitise Acquisition", mw: "2014", pct: 50, color: "#0ea5e9", detail: "Global fintech expansion" },
   { label: "Fiserv Era", mw: "2017", pct: 65, color: "#8b5cf6", detail: "Enterprise fintech maturation" },
   { label: "Commencis Founded", mw: "2018", pct: 80, color: "#10b981", detail: "Independent digital transformation company" },
-  { label: "LLM & AWS Premier", mw: "2024-25", pct: 100, color: "#f59e0b", detail: "Own AI model + AWS Premier Tier Partner" },
+  { label: "LLM & AWS Premier", mw: "2024-25", pct: 100, color: "#f59e0b", detail: "Own AI model + AWS Premier Tier Partner. AWS Consulting Partner of the Year Turkey 2024. Kontent.ai partnership, Commence-Assist AI platform" },
 ];
 
 export default function TurkerlerVision() {
