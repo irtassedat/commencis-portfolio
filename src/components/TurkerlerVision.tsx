@@ -532,7 +532,7 @@ export default function TurkerlerVision() {
             {t.turkerler.titleA}
             <span className="text-gradient">{t.turkerler.titleB}</span>
           </h2>
-          <p className="text-foreground/50 mt-4 max-w-3xl mx-auto text-sm">
+          <p className="text-foreground/60 mt-4 max-w-3xl mx-auto text-sm">
             {t.turkerler.subtitle}
           </p>
         </motion.div>
@@ -545,7 +545,7 @@ export default function TurkerlerVision() {
           className="mb-16 p-6 rounded-xl bg-surface border border-border"
         >
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-sm font-mono text-foreground/40 tracking-wider">
+            <h3 className="text-sm font-mono text-foreground/60 tracking-wider">
               {t.turkerler.portfolio} &mdash; {totalOperational}
             </h3>
             <span className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary">
@@ -632,7 +632,7 @@ export default function TurkerlerVision() {
                 className="flex items-center gap-3"
               >
                 <div className="w-36 shrink-0 text-right">
-                  <span className="text-xs text-foreground/30">{g.label}</span>
+                  <span className="text-xs text-foreground/50">{g.label}</span>
                 </div>
                 <div className="flex-1 h-7 bg-surface-light rounded overflow-hidden relative">
                   <motion.div
@@ -683,13 +683,13 @@ export default function TurkerlerVision() {
                   <span className="text-xs font-bold px-2 py-0.5 rounded" style={{ backgroundColor: p.color + "15", color: p.color }}>
                     {p.capacity}
                   </span>
-                  <span className="text-[10px] text-foreground/30">{p.status}</span>
+                  <span className="text-[10px] text-foreground/50">{p.status}</span>
                 </div>
                 <h4 className="font-semibold text-sm mb-2">{p.name}</h4>
                 <ul className="space-y-1 mb-3">
                   {p.details.slice(0, 3).map((d) => (
-                    <li key={d} className="text-[11px] text-foreground/40 flex items-start gap-1.5">
-                      <span className="text-foreground/20 mt-0.5 shrink-0">&bull;</span>
+                    <li key={d} className="text-[11px] text-foreground/60 flex items-start gap-1.5">
+                      <span className="text-foreground/40 mt-0.5 shrink-0">&bull;</span>
                       {d}
                     </li>
                   ))}
@@ -714,7 +714,7 @@ export default function TurkerlerVision() {
             <span className="text-2xl">{"\uD83D\uDE80"}</span>
             <div>
               <h3 className="font-bold">{t.turkerler.vedasTitle}</h3>
-              <p className="text-xs text-foreground/40">
+              <p className="text-xs text-foreground/55">
                 {vedasData.coverage} &middot; {vedasData.subscribers} &middot; {vedasData.area}
               </p>
             </div>
@@ -727,14 +727,14 @@ export default function TurkerlerVision() {
               { label: vedasData.labels.servicePopulation, value: vedasData.population, color: "#10b981" },
             ].map((m) => (
               <div key={m.label} className="p-3 rounded-lg bg-surface/50 border border-border/50 text-center">
-                <div className="text-[10px] text-foreground/30 uppercase tracking-wider">{m.label}</div>
+                <div className="text-[10px] text-foreground/50 uppercase tracking-wider">{m.label}</div>
                 <div className="text-sm font-bold mt-1" style={{ color: m.color }}>{m.value}</div>
               </div>
             ))}
           </div>
           <div className="p-4 rounded-lg bg-surface/50 border border-border/50">
-            <div className="text-[10px] font-mono text-indigo-500/60 mb-2">{vedasData.aiModule}</div>
-            <p className="text-xs text-foreground/50 leading-relaxed">
+            <div className="text-[10px] font-mono text-indigo-500 font-semibold mb-2">{vedasData.aiModule}</div>
+            <p className="text-xs text-foreground/65 leading-relaxed">
               {vedasData.aiText}
             </p>
           </div>
@@ -762,12 +762,12 @@ export default function TurkerlerVision() {
               >
                 <h4 className="font-semibold text-sm mb-3">{h.name}</h4>
                 <div className="space-y-2 text-xs">
-                  <div className="flex justify-between"><span className="text-foreground/30">{t.turkerler.labels.capacity}</span><span className="font-medium">{h.beds}</span></div>
-                  <div className="flex justify-between"><span className="text-foreground/30">{t.turkerler.labels.area}</span><span className="font-medium">{h.area}</span></div>
-                  <div className="flex justify-between"><span className="text-foreground/30">{t.turkerler.labels.investment}</span><span className="font-medium">{h.investment}</span></div>
-                  <div className="flex justify-between"><span className="text-foreground/30">{t.turkerler.labels.status}</span><span className="text-primary font-medium">{h.status}</span></div>
+                  <div className="flex justify-between"><span className="text-foreground/50">{t.turkerler.labels.capacity}</span><span className="font-medium">{h.beds}</span></div>
+                  <div className="flex justify-between"><span className="text-foreground/50">{t.turkerler.labels.area}</span><span className="font-medium">{h.area}</span></div>
+                  <div className="flex justify-between"><span className="text-foreground/50">{t.turkerler.labels.investment}</span><span className="font-medium">{h.investment}</span></div>
+                  <div className="flex justify-between"><span className="text-foreground/50">{t.turkerler.labels.status}</span><span className="text-primary font-medium">{h.status}</span></div>
                 </div>
-                <div className="mt-3 pt-3 border-t border-border text-[10px] text-foreground/30">{h.note}</div>
+                <div className="mt-3 pt-3 border-t border-border text-[10px] text-foreground/50">{h.note}</div>
               </motion.div>
             ))}
           </div>
@@ -807,22 +807,22 @@ export default function TurkerlerVision() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <div className="text-[10px] font-mono text-red-400/50 mb-2 tracking-wider">{t.turkerler.currentIssues}</div>
+                    <div className="text-[10px] font-mono text-red-400 font-semibold mb-2 tracking-wider">{t.turkerler.currentIssues}</div>
                     <ul className="space-y-1.5">
                       {item.problems.map((p) => (
                         <li key={p} className="text-[11px] text-foreground/55 flex items-start gap-2">
-                          <span className="text-red-400/40 shrink-0">&times;</span>
+                          <span className="text-red-400/70 shrink-0">&times;</span>
                           {p}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <div className="text-[10px] font-mono text-primary/80 mb-2 tracking-wider">{t.turkerler.aiSolution}</div>
+                    <div className="text-[10px] font-mono text-primary font-semibold mb-2 tracking-wider">{t.turkerler.aiSolution}</div>
                     <ul className="space-y-1.5">
                       {item.solutions.map((s) => (
                         <li key={s} className="text-[11px] text-foreground/65 flex items-start gap-2">
-                          <span className="text-primary/60 shrink-0">&check;</span>
+                          <span className="text-primary shrink-0">&check;</span>
                           {s}
                         </li>
                       ))}
@@ -831,7 +831,7 @@ export default function TurkerlerVision() {
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-border flex items-center gap-2">
-                  <span className="text-[10px] font-mono text-accent/50">ROI:</span>
+                  <span className="text-[10px] font-mono text-accent font-semibold">ROI:</span>
                   <span className="text-xs text-accent font-medium">{item.roi}</span>
                 </div>
               </motion.div>
