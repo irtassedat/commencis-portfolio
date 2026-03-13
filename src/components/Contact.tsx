@@ -40,14 +40,14 @@ export default function Contact() {
               transition={{ delay: i * 0.1 }}
               className="p-5 rounded-xl bg-surface border border-border relative"
             >
-              <div className="text-3xl font-bold text-primary/10 absolute top-3 right-4">
+              <div className="text-3xl font-bold text-primary/20 absolute top-3 right-4">
                 {s.step}
               </div>
-              <div className="text-primary text-xs font-mono mb-2">
+              <div className="text-primary text-xs font-semibold font-mono mb-2">
                 {t.contact.stepLabel} {s.step}
               </div>
               <h4 className="font-semibold text-sm mb-1.5">{s.title}</h4>
-              <p className="text-xs text-foreground/40 leading-relaxed">
+              <p className="text-xs text-foreground/55 leading-relaxed">
                 {s.desc}
               </p>
             </motion.div>

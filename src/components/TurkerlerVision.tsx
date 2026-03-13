@@ -693,8 +693,8 @@ export default function TurkerlerVision() {
                   ))}
                 </ul>
                 <div className="pt-3 border-t border-border">
-                  <div className="text-[10px] font-mono text-primary/60 mb-1">{t.turkerler.aiContribution}</div>
-                  <p className="text-[10px] text-foreground/35 leading-relaxed">{p.aiValue}</p>
+                  <div className="text-[10px] font-mono text-primary font-semibold mb-1">{t.turkerler.aiContribution}</div>
+                  <p className="text-[10px] text-foreground/60 leading-relaxed">{p.aiValue}</p>
                 </div>
               </motion.div>
             ))}
@@ -770,8 +770,8 @@ export default function TurkerlerVision() {
             ))}
           </div>
           <div className="mt-4 p-4 rounded-lg bg-surface border border-border">
-            <div className="text-[10px] font-mono text-foreground/30 mb-1">{t.turkerler.aiContribution}</div>
-            <p className="text-xs text-foreground/40">
+            <div className="text-[10px] font-mono text-primary font-semibold mb-1">{t.turkerler.aiContribution}</div>
+            <p className="text-xs text-foreground/60">
               {t.turkerler.healthcareAi}
             </p>
           </div>
@@ -808,7 +808,7 @@ export default function TurkerlerVision() {
                     <div className="text-[10px] font-mono text-red-400/50 mb-2 tracking-wider">{t.turkerler.currentIssues}</div>
                     <ul className="space-y-1.5">
                       {item.problems.map((p) => (
-                        <li key={p} className="text-[11px] text-foreground/40 flex items-start gap-2">
+                        <li key={p} className="text-[11px] text-foreground/55 flex items-start gap-2">
                           <span className="text-red-400/40 shrink-0">&times;</span>
                           {p}
                         </li>
@@ -816,10 +816,10 @@ export default function TurkerlerVision() {
                     </ul>
                   </div>
                   <div>
-                    <div className="text-[10px] font-mono text-primary/50 mb-2 tracking-wider">{t.turkerler.aiSolution}</div>
+                    <div className="text-[10px] font-mono text-primary/80 mb-2 tracking-wider">{t.turkerler.aiSolution}</div>
                     <ul className="space-y-1.5">
                       {item.solutions.map((s) => (
-                        <li key={s} className="text-[11px] text-foreground/50 flex items-start gap-2">
+                        <li key={s} className="text-[11px] text-foreground/65 flex items-start gap-2">
                           <span className="text-primary/60 shrink-0">&check;</span>
                           {s}
                         </li>

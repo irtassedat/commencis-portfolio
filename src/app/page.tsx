@@ -9,6 +9,7 @@ import LiveDemo from "@/components/LiveDemo";
 import TechStack from "@/components/TechStack";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import AiChat from "@/components/AiChat";
 import { fetchGitHubProfile, fetchGitHubRepos } from "@/lib/github";
 
 export const revalidate = 3600; // Revalidate every hour
@@ -50,6 +51,7 @@ export default async function Home() {
       <TechStack />
       <Contact />
       <Footer />
+      <AiChat />
     </main>
   );
 }

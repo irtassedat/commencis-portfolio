@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLang, Lang } from "@/lib/i18n";
+import { useTheme } from "@/components/ClientProviders";
 
 const langs: { key: Lang; label: string }[] = [
   { key: "tr", label: "TR" },
@@ -13,6 +14,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { lang, setLang, t } = useLang();
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -54,6 +56,18 @@ export default function Navbar() {
               </a>
             ))}
             <div className="w-px h-5 bg-border mx-2" />
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-surface-light transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <svg className="w-4 h-4 text-foreground/60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+              ) : (
+                <svg className="w-4 h-4 text-foreground/60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+              )}
+            </button>
+            <div className="w-px h-5 bg-border mx-2" />
             <div className="flex items-center rounded-lg overflow-hidden border border-border/50">
               {langs.map((l) => (
                 <button
@@ -73,6 +87,17 @@ export default function Navbar() {
 
           {/* Mobile: lang + hamburger */}
           <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-1.5 rounded-lg hover:bg-surface-light transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <svg className="w-3.5 h-3.5 text-foreground/60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+              ) : (
+                <svg className="w-3.5 h-3.5 text-foreground/60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+              )}
+            </button>
             <div className="flex items-center rounded-lg overflow-hidden border border-border/50">
               {langs.map((l) => (
                 <button

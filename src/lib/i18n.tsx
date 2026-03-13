@@ -190,10 +190,10 @@ const dict = {
         "commencis-portfolio": { title: "Commencis Portfolyo", desc: "Commencis için AI tabanlı dijital dönüşüm vizyonu. Next.js + TypeScript + Framer Motion." },
       },
       achievements: [
-        { title: "Multi-Tenant SaaS Platform", desc: "8+ marka ve 10+ şubeyi tek panelden yöneten restoran sistemi. React/Vite frontend, Express.js backend, PostgreSQL veritabanı.", metric: "176+ API endpoint" },
-        { title: "AI Ajan Orkestrasyon Sistemi", desc: "60+ uzman ajanın koordineli çalışmasını sağlayan enterprise orkestrasyon platformu. Commencis'in agentic AI vizyonuyla uyumlu.", metric: "60+ AI ajan" },
-        { title: "Gerçek Zamanlı Veri İşleme", desc: "20+ kaynaktan yüksek hacimli veri toplama, normalizasyon ve anlık anomali tespit sistemi. Dataroid analitiğiyle karşılaştırılabilir.", metric: "10K+ veri/dk" },
-        { title: "Enterprise API Mimarisi", desc: "Java Spring Boot tabanlı enterprise API. Microservices pattern, RBAC güvenlik, performans optimizasyonu.", metric: "12K+ satır kod" },
+        { title: "VPS & Sunucu Otomasyon Platformu", desc: "12+ VPS sunucu üzerinde deployment, monitoring ve yönetim otomasyonu. Uptime izleme, otomatik yedekleme, SSL sertifika yönetimi ve performans raporlama.", metric: "12+ Sunucu" },
+        { title: "Telegram Bot Ekosistemi", desc: "15+ otomasyon botu: anlık bildirim, çok kaynaklı veri toplama, otomatik raporlama, müşteri etkileşimi ve cron job yönetimi. Commencis'in Commence Bot vizyonuyla uyumlu.", metric: "15+ Bot" },
+        { title: "Fraud Analitik & Risk Motoru", desc: "Gerçek zamanlı anomali tespiti, pattern matching, risk skorlama ve uyarı sistemi. 20+ veri kaynağından akan verinin analizi. Commencis'in bankacılık AI güvenliğiyle örtüşen deneyim.", metric: "10K+ İşlem/dk" },
+        { title: "AI Ajan Orkestrasyon Sistemi", desc: "60+ uzman AI ajanın koordineli çalışmasını sağlayan enterprise orkestrasyon platformu. Görev dağılımı, sonuç birleştirme, hata yönetimi. Commencis'in agentic AI vizyonuyla tam uyumlu.", metric: "60+ AI Ajan" },
       ],
     },
     tech: {
@@ -415,10 +415,10 @@ const dict = {
         "commencis-portfolio": { title: "Commencis Portfolio", desc: "AI-powered digital transformation vision for Commencis. Next.js + TypeScript + Framer Motion." },
       },
       achievements: [
-        { title: "Multi-Tenant SaaS Platform", desc: "Restaurant system managing 8+ brands and 10+ branches from a single panel. React/Vite frontend, Express.js backend, PostgreSQL.", metric: "176+ API endpoints" },
-        { title: "AI Agent Orchestration", desc: "Enterprise orchestration platform coordinating 60+ specialized agents. Aligned with Commencis's agentic AI vision.", metric: "60+ AI agents" },
-        { title: "Real-Time Data Processing", desc: "High-volume data collection from 20+ sources with normalization and real-time anomaly detection. Comparable to Dataroid analytics.", metric: "10K+ data/min" },
-        { title: "Enterprise API Architecture", desc: "Java Spring Boot enterprise API. Microservices pattern, RBAC security, performance optimization.", metric: "12K+ lines of code" },
+        { title: "VPS & Server Automation Platform", desc: "Deployment, monitoring, and management automation across 12+ VPS servers. Uptime monitoring, automatic backups, SSL certificate management, and performance reporting.", metric: "12+ Servers" },
+        { title: "Telegram Bot Ecosystem", desc: "15+ automation bots: instant notifications, multi-source data collection, automated reporting, customer engagement, and cron job management. Aligned with Commencis's Commence Bot vision.", metric: "15+ Bots" },
+        { title: "Fraud Analytics & Risk Engine", desc: "Real-time anomaly detection, pattern matching, risk scoring, and alerting system. Analysis of data flowing from 20+ sources. Experience aligned with Commencis's banking AI security.", metric: "10K+ Txn/min" },
+        { title: "AI Agent Orchestration System", desc: "Enterprise orchestration platform coordinating 60+ specialist AI agents. Task distribution, result aggregation, error handling. Fully aligned with Commencis's agentic AI vision.", metric: "60+ AI Agents" },
       ],
     },
     tech: {
