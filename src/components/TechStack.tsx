@@ -65,7 +65,7 @@ export default function TechStack() {
       x: seededValue(i, 1) * 90 + 5,
       y: seededValue(i, 2) * 90 + 2,
       size: seededValue(i, 3) * 0.6 + 0.6, // 0.6–1.2rem
-      opacity: seededValue(i, 4) * 0.03 + 0.03, // 3–6%
+      opacity: seededValue(i, 4) * 0.06 + 0.06, // 6–12%
       duration: seededValue(i, 5) * 14 + 16, // 16–30s
       delay: seededValue(i, 6) * -24,
       driftX: (seededValue(i, 7) - 0.5) * 36, // -18 to +18px

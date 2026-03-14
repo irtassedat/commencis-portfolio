@@ -109,19 +109,21 @@ export default function TurkerlerVision() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.3 }}
           className="mt-8 text-center"
         >
           <Link
             href="/deep-analysis"
-            className="text-xs font-mono text-foreground/30 hover:text-primary/70 transition-colors tracking-wide"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary/20 bg-primary/5 hover:bg-primary/10 hover:border-primary/40 transition-all text-xs font-medium text-primary"
           >
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
             {lang === "tr"
-              ? "Detaylı analiz →"
-              : "Detailed analysis →"}
+              ? "Proje detayları, yetkinlik uyumu & sektör araştırması"
+              : "Project details, skills alignment & industry research"}
+            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </Link>
         </motion.div>
       </div>
