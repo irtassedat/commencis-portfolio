@@ -80,103 +80,95 @@ export default function Hero() {
               <a href="#demo" className="px-6 py-3 border border-border/40 bg-surface/20 backdrop-blur-sm text-sm font-medium rounded-lg hover:border-primary/20 transition-colors">{t.hero.cta2}</a>
             </motion.div>
           </div>
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto lg:scrollbar-thin">
-            <div className="p-5 rounded-xl bg-surface/40 backdrop-blur-sm border border-border/30">
-              <div className="text-[10px] font-mono text-foreground/25 mb-4 tracking-wider">{t.hero.data.header}</div>
-              <div className="grid grid-cols-2 gap-2 mb-3">
-                {t.hero.data.metrics.map((m, i) => (
-                  <div key={m.label} className="p-2.5 rounded-lg bg-background/40 border border-border/20">
-                    <div className="text-[8px] text-foreground/20 uppercase tracking-wider">{m.label}</div>
-                    <div className="text-base font-bold mt-0.5" style={{ color: metricColors[i] }}>{m.value}</div>
-                    <div className="text-[8px] text-foreground/15 mt-0.5">{m.sub}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="grid grid-cols-3 gap-2 mb-3">
-                {t.hero.data.sub.map((m) => (
-                  <div key={m.label} className="p-2 rounded-lg bg-background/30 border border-border/15 text-center">
-                    <div className="text-[8px] text-foreground/15 uppercase">{m.label}</div>
-                    <div className="text-xs font-bold text-foreground/60 mt-0.5">{m.value}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="p-3 rounded-lg bg-primary/5 border border-primary/10">
-                <div className="text-[9px] text-primary/50 uppercase tracking-wider mb-1">{t.hero.data.ipo.title}</div>
-                <div className="text-xs text-foreground/50">{t.hero.data.ipo.desc}</div>
-              </div>
-              <div className="mt-3 p-3 rounded-lg bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20">
-                <div className="text-[9px] text-accent uppercase tracking-wider mb-1.5 font-bold">{lang === "tr" ? "BENİM KATKIM" : "MY CONTRIBUTION"}</div>
-                <div className="grid grid-cols-4 gap-2">
-                  <div className="p-1.5 rounded-md bg-background/30 text-center">
-                    <div className="text-sm font-bold text-accent">130K+</div>
-                    <div className="text-[7px] text-foreground/40 uppercase">{lang === "tr" ? "Satır" : "Lines"}</div>
-                  </div>
-                  <div className="p-1.5 rounded-md bg-background/30 text-center">
-                    <div className="text-sm font-bold text-primary">400+</div>
-                    <div className="text-[7px] text-foreground/40 uppercase">API</div>
-                  </div>
-                  <div className="p-1.5 rounded-md bg-background/30 text-center">
-                    <div className="text-sm font-bold text-purple-400">100+</div>
-                    <div className="text-[7px] text-foreground/40 uppercase">DB</div>
-                  </div>
-                  <div className="p-1.5 rounded-md bg-background/30 text-center">
-                    <div className="text-sm font-bold text-emerald-400">8</div>
-                    <div className="text-[7px] text-foreground/40 uppercase">Docker</div>
-                  </div>
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="space-y-3">
+            {/* BENİM KATKIM — compact stats */}
+            <div className="p-4 rounded-xl bg-surface/40 backdrop-blur-sm border border-border/30">
+              <div className="text-[9px] text-accent uppercase tracking-wider mb-2 font-bold">{lang === "tr" ? "BENİM KATKIM" : "MY CONTRIBUTION"}</div>
+              <div className="grid grid-cols-4 gap-2">
+                <div className="p-1.5 rounded-md bg-background/30 text-center">
+                  <div className="text-sm font-bold text-accent">130K+</div>
+                  <div className="text-[7px] text-foreground/40 uppercase">{lang === "tr" ? "Satır" : "Lines"}</div>
+                </div>
+                <div className="p-1.5 rounded-md bg-background/30 text-center">
+                  <div className="text-sm font-bold" style={{ color: "#6366f1" }}>400+</div>
+                  <div className="text-[7px] text-foreground/40 uppercase">API</div>
+                </div>
+                <div className="p-1.5 rounded-md bg-background/30 text-center">
+                  <div className="text-sm font-bold text-purple-400">100+</div>
+                  <div className="text-[7px] text-foreground/40 uppercase">DB</div>
+                </div>
+                <div className="p-1.5 rounded-md bg-background/30 text-center">
+                  <div className="text-sm font-bold text-emerald-400">8</div>
+                  <div className="text-[7px] text-foreground/40 uppercase">Docker</div>
                 </div>
               </div>
-
-              {/* Sektör Sorunları — compact, clickable */}
-              <Link href="/deep-analysis" className="group block mt-3">
-                <div className="p-4 rounded-lg bg-gradient-to-br from-red-500/5 via-surface/60 to-indigo-500/5 border border-border/30 hover:border-primary/30 transition-all">
-                  <div className="flex items-center justify-between mb-2.5">
-                    <div className="text-[9px] text-red-400/70 uppercase tracking-wider font-bold">
-                      {lang === "tr" ? "SEKTÖR SORUNLARI & ÇÖZÜMLERİM" : "INDUSTRY PROBLEMS & MY SOLUTIONS"}
-                    </div>
-                    <motion.svg
-                      animate={{ x: [0, 4, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                      className="w-3.5 h-3.5 text-primary/50 group-hover:text-primary transition-colors"
-                      fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </motion.svg>
-                  </div>
-                  <div className="space-y-2">
-                    {(lang === "tr"
-                      ? [
-                          { icon: "\uD83C\uDFE6", area: "Legacy Bankacılık", severity: "Kritik", solution: "API Gateway ile modernizasyon", color: "#ef4444" },
-                          { icon: "\uD83E\uDDE0", area: "Türkçe NLP Boşluğu", severity: "Kritik", solution: "Commencis LLM → Agentic AI", color: "#6366f1" },
-                          { icon: "\u2601\uFE0F", area: "Cloud Göçü", severity: "Yüksek", solution: "AWS altyapı & DevOps", color: "#0ea5e9" },
-                        ]
-                      : [
-                          { icon: "\uD83C\uDFE6", area: "Legacy Banking", severity: "Critical", solution: "API Gateway modernization", color: "#ef4444" },
-                          { icon: "\uD83E\uDDE0", area: "Turkish NLP Gap", severity: "Critical", solution: "Commencis LLM → Agentic AI", color: "#6366f1" },
-                          { icon: "\u2601\uFE0F", area: "Cloud Migration", severity: "High", solution: "AWS infra & DevOps", color: "#0ea5e9" },
-                        ]
-                    ).map((item) => (
-                      <div key={item.area} className="flex items-center gap-2 p-2 rounded-md bg-background/40 border border-border/20 group-hover:border-border/40 transition-colors">
-                        <span className="text-sm shrink-0">{item.icon}</span>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-1.5">
-                            <span className="text-[10px] font-semibold text-foreground/70 truncate">{item.area}</span>
-                            <span className="text-[8px] px-1.5 py-0.5 rounded-full shrink-0" style={{ backgroundColor: item.color + "15", color: item.color }}>
-                              {item.severity}
-                            </span>
-                          </div>
-                          <div className="text-[9px] text-foreground/35 truncate">{item.solution}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-2.5 flex items-center justify-center gap-1 text-[10px] text-primary/60 group-hover:text-primary transition-colors font-medium">
-                    {lang === "tr" ? "Detaylı analiz & çözüm önerilerim" : "Detailed analysis & my solution proposals"}
-                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  </div>
-                </div>
-              </Link>
             </div>
-            <div className="mt-3 flex items-center justify-end gap-2 text-[9px] text-foreground/15"><span>{t.hero.data.source}</span></div>
+
+            {/* Commencis Strategic Radar — tıklanabilir kartlar */}
+            <Link href="/deep-analysis" className="group block">
+              <div className="p-4 rounded-xl bg-surface/40 backdrop-blur-sm border border-border/30 hover:border-primary/30 transition-all">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-[9px] font-mono text-foreground/25 tracking-wider">{lang === "tr" ? "COMMENCİS STRATEJİK RADAR" : "COMMENCIS STRATEGIC RADAR"}</div>
+                  <motion.svg animate={{ x: [0, 4, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }} className="w-3.5 h-3.5 text-primary/40 group-hover:text-primary transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></motion.svg>
+                </div>
+                <div className="space-y-2">
+                  {(lang === "tr"
+                    ? [
+                        { date: "Eyl 2025", title: "OpenAI Challenge — Dünya 2.si", tag: "AI/ML", color: "#f59e0b" },
+                        { date: "Eki 2025", title: "AWS Premier Tier Partner", tag: "Cloud", color: "#0ea5e9" },
+                        { date: "2025", title: "CAIRNE — Türkiye'den Tek Üye", tag: "AI Gov", color: "#8b5cf6" },
+                        { date: "Tem 2025", title: "MCP Showdown: ADK vs Agents SDK", tag: "Agentic", color: "#ef4444" },
+                      ]
+                    : [
+                        { date: "Sep 2025", title: "OpenAI Challenge — 2nd Worldwide", tag: "AI/ML", color: "#f59e0b" },
+                        { date: "Oct 2025", title: "AWS Premier Tier Partner", tag: "Cloud", color: "#0ea5e9" },
+                        { date: "2025", title: "CAIRNE — Only Member from Turkey", tag: "AI Gov", color: "#8b5cf6" },
+                        { date: "Jul 2025", title: "MCP Showdown: ADK vs Agents SDK", tag: "Agentic", color: "#ef4444" },
+                      ]
+                  ).map((item) => (
+                    <div key={item.title} className="flex items-center gap-2.5 p-2 rounded-lg bg-background/40 border border-border/20 group-hover:border-border/40 transition-colors">
+                      <span className="text-[9px] font-mono font-bold shrink-0 w-16" style={{ color: item.color }}>{item.date}</span>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-[10px] font-medium text-foreground/70 truncate block">{item.title}</span>
+                      </div>
+                      <span className="text-[8px] px-1.5 py-0.5 rounded-full shrink-0" style={{ backgroundColor: item.color + "15", color: item.color }}>{item.tag}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-3 flex items-center justify-center gap-1 text-[10px] text-primary/60 group-hover:text-primary transition-colors font-medium">
+                  {lang === "tr" ? "7 stratejik hamle & deneyim eşleşmem →" : "7 strategic moves & my experience match →"}
+                </div>
+              </div>
+            </Link>
+
+            {/* Sektör Sorunları — compact, clickable */}
+            <Link href="/deep-analysis" className="group block">
+              <div className="p-4 rounded-xl bg-gradient-to-br from-red-500/5 via-surface/40 to-indigo-500/5 backdrop-blur-sm border border-border/30 hover:border-primary/30 transition-all">
+                <div className="text-[9px] text-red-400/70 uppercase tracking-wider font-bold mb-2">
+                  {lang === "tr" ? "SEKTÖR SORUNLARI & ÇÖZÜMLERİM" : "INDUSTRY PROBLEMS & MY SOLUTIONS"}
+                </div>
+                <div className="space-y-1.5">
+                  {(lang === "tr"
+                    ? [
+                        { icon: "\uD83C\uDFE6", area: "Legacy Bankacılık", severity: "Kritik", color: "#ef4444" },
+                        { icon: "\uD83E\uDDE0", area: "Türkçe NLP Boşluğu", severity: "Kritik", color: "#6366f1" },
+                        { icon: "\u2601\uFE0F", area: "Cloud Göçü", severity: "Yüksek", color: "#0ea5e9" },
+                      ]
+                    : [
+                        { icon: "\uD83C\uDFE6", area: "Legacy Banking", severity: "Critical", color: "#ef4444" },
+                        { icon: "\uD83E\uDDE0", area: "Turkish NLP Gap", severity: "Critical", color: "#6366f1" },
+                        { icon: "\u2601\uFE0F", area: "Cloud Migration", severity: "High", color: "#0ea5e9" },
+                      ]
+                  ).map((item) => (
+                    <div key={item.area} className="flex items-center gap-2 p-1.5 rounded-md bg-background/30">
+                      <span className="text-xs shrink-0">{item.icon}</span>
+                      <span className="text-[10px] font-medium text-foreground/60 flex-1">{item.area}</span>
+                      <span className="text-[8px] px-1.5 py-0.5 rounded-full" style={{ backgroundColor: item.color + "15", color: item.color }}>{item.severity}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Link>
           </motion.div>
         </div>
       </div>

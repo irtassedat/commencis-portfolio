@@ -276,9 +276,9 @@ export default function DeepAnalysis() {
                   <p className="text-xs text-foreground/55 leading-relaxed mb-4">{item.desc}</p>
 
                   {/* My Fit — the money shot */}
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-primary/8 to-accent/5 border border-primary/15">
-                    <div className="text-[9px] font-mono font-bold text-primary mb-1">{tr ? "BENİM KATKUM:" : "MY CONTRIBUTION:"}</div>
-                    <p className="text-[11px] text-foreground/65 leading-relaxed">{item.myFit}</p>
+                  <div className="p-3 rounded-lg border" style={{ backgroundColor: "rgba(99,102,241,0.08)", borderColor: "rgba(99,102,241,0.2)" }}>
+                    <div className="text-[9px] font-mono font-bold mb-1" style={{ color: "#818cf8" }}>{tr ? "BENİM KATKUM:" : "MY CONTRIBUTION:"}</div>
+                    <p className="text-[11px] leading-relaxed" style={{ color: "rgba(241,245,249,0.65)" }}>{item.myFit}</p>
                   </div>
                 </div>
               </motion.div>
