@@ -201,7 +201,7 @@ const projectsTr = [
 /* ═══════════════════════════════════════════════════════════ */
 
 export default function DeepAnalysis() {
-  const { lang } = useLang();
+  const { lang, setLang } = useLang();
   const tr = lang === "tr";
   const radar = tr ? radarTr : radarEn;
   const market = tr ? marketTr : marketEn;
@@ -217,9 +217,15 @@ export default function DeepAnalysis() {
             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             {tr ? "Portfolyoya Dön" : "Back to Portfolio"}
           </Link>
-          <span className="text-[10px] text-foreground/30 font-mono">
-            {tr ? "DERİN ANALİZ" : "DEEP ANALYSIS"}
-          </span>
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] text-foreground/30 font-mono">
+              {tr ? "DERİN ANALİZ" : "DEEP ANALYSIS"}
+            </span>
+            <div className="flex rounded-lg border border-border/50 overflow-hidden">
+              <button onClick={() => setLang("tr")} className={`px-2.5 py-1 text-[10px] font-medium transition-colors ${lang === "tr" ? "bg-primary/20 text-primary" : "text-foreground/30 hover:text-foreground/50"}`}>TR</button>
+              <button onClick={() => setLang("en")} className={`px-2.5 py-1 text-[10px] font-medium transition-colors ${lang === "en" ? "bg-primary/20 text-primary" : "text-foreground/30 hover:text-foreground/50"}`}>EN</button>
+            </div>
+          </div>
         </div>
       </div>
 
