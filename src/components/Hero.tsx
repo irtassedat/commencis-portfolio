@@ -80,19 +80,19 @@ export default function Hero() {
               <a href="#demo" className="px-6 py-3 border border-border/40 bg-surface/20 backdrop-blur-sm text-sm font-medium rounded-lg hover:border-primary/20 transition-colors">{t.hero.cta2}</a>
             </motion.div>
           </div>
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto lg:scrollbar-thin">
             <div className="p-5 rounded-xl bg-surface/40 backdrop-blur-sm border border-border/30">
               <div className="text-[10px] font-mono text-foreground/25 mb-4 tracking-wider">{t.hero.data.header}</div>
-              <div className="grid grid-cols-2 gap-3 mb-4">
+              <div className="grid grid-cols-2 gap-2 mb-3">
                 {t.hero.data.metrics.map((m, i) => (
-                  <div key={m.label} className="p-3 rounded-lg bg-background/40 border border-border/20">
-                    <div className="text-[9px] text-foreground/20 uppercase tracking-wider">{m.label}</div>
-                    <div className="text-lg font-bold mt-0.5" style={{ color: metricColors[i] }}>{m.value}</div>
-                    <div className="text-[9px] text-foreground/15 mt-0.5">{m.sub}</div>
+                  <div key={m.label} className="p-2.5 rounded-lg bg-background/40 border border-border/20">
+                    <div className="text-[8px] text-foreground/20 uppercase tracking-wider">{m.label}</div>
+                    <div className="text-base font-bold mt-0.5" style={{ color: metricColors[i] }}>{m.value}</div>
+                    <div className="text-[8px] text-foreground/15 mt-0.5">{m.sub}</div>
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-3 gap-2 mb-4">
+              <div className="grid grid-cols-3 gap-2 mb-3">
                 {t.hero.data.sub.map((m) => (
                   <div key={m.label} className="p-2 rounded-lg bg-background/30 border border-border/15 text-center">
                     <div className="text-[8px] text-foreground/15 uppercase">{m.label}</div>
@@ -104,24 +104,24 @@ export default function Hero() {
                 <div className="text-[9px] text-primary/50 uppercase tracking-wider mb-1">{t.hero.data.ipo.title}</div>
                 <div className="text-xs text-foreground/50">{t.hero.data.ipo.desc}</div>
               </div>
-              <div className="mt-3 p-4 rounded-lg bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20">
-                <div className="text-[9px] text-accent uppercase tracking-wider mb-2 font-bold">{lang === "tr" ? "BENİM KATKIM" : "MY CONTRIBUTION"}</div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="p-2 rounded-md bg-background/30">
-                    <div className="text-base font-bold text-accent">130K+</div>
-                    <div className="text-[8px] text-foreground/40 uppercase">{lang === "tr" ? "Satır Kod" : "Lines Code"}</div>
+              <div className="mt-3 p-3 rounded-lg bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20">
+                <div className="text-[9px] text-accent uppercase tracking-wider mb-1.5 font-bold">{lang === "tr" ? "BENİM KATKIM" : "MY CONTRIBUTION"}</div>
+                <div className="grid grid-cols-4 gap-2">
+                  <div className="p-1.5 rounded-md bg-background/30 text-center">
+                    <div className="text-sm font-bold text-accent">130K+</div>
+                    <div className="text-[7px] text-foreground/40 uppercase">{lang === "tr" ? "Satır" : "Lines"}</div>
                   </div>
-                  <div className="p-2 rounded-md bg-background/30">
-                    <div className="text-base font-bold text-primary">400+</div>
-                    <div className="text-[8px] text-foreground/40 uppercase">{lang === "tr" ? "API Endpoint" : "API Endpoints"}</div>
+                  <div className="p-1.5 rounded-md bg-background/30 text-center">
+                    <div className="text-sm font-bold text-primary">400+</div>
+                    <div className="text-[7px] text-foreground/40 uppercase">API</div>
                   </div>
-                  <div className="p-2 rounded-md bg-background/30">
-                    <div className="text-base font-bold text-purple-400">100+</div>
-                    <div className="text-[8px] text-foreground/40 uppercase">{lang === "tr" ? "DB Modeli" : "DB Models"}</div>
+                  <div className="p-1.5 rounded-md bg-background/30 text-center">
+                    <div className="text-sm font-bold text-purple-400">100+</div>
+                    <div className="text-[7px] text-foreground/40 uppercase">DB</div>
                   </div>
-                  <div className="p-2 rounded-md bg-background/30">
-                    <div className="text-base font-bold text-emerald-400">8</div>
-                    <div className="text-[8px] text-foreground/40 uppercase">{lang === "tr" ? "Canlı Container" : "Live Containers"}</div>
+                  <div className="p-1.5 rounded-md bg-background/30 text-center">
+                    <div className="text-sm font-bold text-emerald-400">8</div>
+                    <div className="text-[7px] text-foreground/40 uppercase">Docker</div>
                   </div>
                 </div>
               </div>
