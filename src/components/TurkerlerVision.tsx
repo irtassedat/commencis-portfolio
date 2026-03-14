@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useLang } from "@/lib/i18n";
 
 const reasonsTr = [
@@ -81,7 +82,7 @@ export default function TurkerlerVision() {
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 gap-4 mb-8">
           {reasons.map((r, i) => (
             <motion.div
               key={r.title}
@@ -106,6 +107,26 @@ export default function TurkerlerVision() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <Link
+            href="/deep-analysis"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 text-sm font-medium rounded-lg hover:border-primary/40 hover:shadow-[0_0_20px_rgba(59,130,246,0.1)] transition-all"
+          >
+            <span className="text-primary">
+              {lang === "tr" ? "Derin Analiz — Projeler, Yetkinlik Uyumu & Sektör Araştırması" : "Deep Analysis — Projects, Skills Alignment & Industry Research"}
+            </span>
+            <svg className="w-3.5 h-3.5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </Link>
+          <p className="text-[10px] text-foreground/25 mt-2">
+            {lang === "tr" ? "Teknik detaylar, mimari kararlar ve Commencis uyum analizi" : "Technical details, architecture decisions and Commencis fit analysis"}
+          </p>
+        </motion.div>
       </div>
     </section>
   );

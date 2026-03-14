@@ -108,13 +108,16 @@ export default function GitHubProjects({ repos, profile }: Props) {
             const tags = projectTags[repo.name] || [];
             const extras = projectExtras[repo.name];
             return (
-              <motion.div
+              <motion.a
                 key={repo.name}
+                href={repo.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
-                className="rounded-xl bg-surface border border-border hover:border-primary/20 transition-all group overflow-hidden"
+                className="rounded-xl bg-surface border border-border hover:border-primary/20 transition-all group overflow-hidden block"
               >
                 {extras?.image && (
                   <div className="relative h-36 overflow-hidden bg-background/50">
@@ -131,9 +134,7 @@ export default function GitHubProjects({ repos, profile }: Props) {
                     <h4 className="font-semibold text-sm group-hover:text-primary transition-colors">
                       {meta?.title || repo.name}
                     </h4>
-                    <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="shrink-0 mt-0.5">
-                      <svg className="w-3.5 h-3.5 text-foreground/20 group-hover:text-primary transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                    </a>
+                    <svg className="w-3.5 h-3.5 text-foreground/20 group-hover:text-primary transition-colors shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                   </div>
                   <p className="text-xs text-foreground/40 leading-relaxed mb-3">
                     {meta?.desc || repo.description || ""}
@@ -167,18 +168,20 @@ export default function GitHubProjects({ repos, profile }: Props) {
                       </div>
                     </div>
                     {extras?.liveUrl && (
-                      <a
-                        href={extras.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[10px] px-2.5 py-1 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium"
+                      <span
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          window.open(extras.liveUrl, "_blank");
+                        }}
+                        className="text-[10px] px-2.5 py-1 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium cursor-pointer"
                       >
                         {lang === "tr" ? "Canlı Demo" : "Live Demo"} &rarr;
-                      </a>
+                      </span>
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </motion.a>
             );
           })}
         </div>
