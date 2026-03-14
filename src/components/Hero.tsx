@@ -103,13 +103,25 @@ export default function Hero() {
                 <div className="text-[9px] text-primary/50 uppercase tracking-wider mb-1">{t.hero.data.ipo.title}</div>
                 <div className="text-xs text-foreground/50">{t.hero.data.ipo.desc}</div>
               </div>
-              <div className="mt-3 p-3 rounded-lg bg-accent/5 border border-accent/10">
-                <div className="text-[9px] text-accent/50 uppercase tracking-wider mb-1">{lang === "tr" ? "BENİM KATKIM" : "MY CONTRIBUTION"}</div>
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="text-[9px] text-foreground/40"><span className="text-accent font-bold">60+</span> {lang === "tr" ? "AI Ajan" : "AI Agents"}</div>
-                  <div className="text-[9px] text-foreground/40"><span className="text-accent font-bold">13+</span> {lang === "tr" ? "Üretim Projesi" : "Production Projects"}</div>
-                  <div className="text-[9px] text-foreground/40"><span className="text-accent font-bold">15+</span> {lang === "tr" ? "Otomasyon Botu" : "Automation Bots"}</div>
-                  <div className="text-[9px] text-foreground/40"><span className="text-accent font-bold">176+</span> {lang === "tr" ? "API Endpoint" : "API Endpoints"}</div>
+              <div className="mt-3 p-4 rounded-lg bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20">
+                <div className="text-[9px] text-accent uppercase tracking-wider mb-2 font-bold">{lang === "tr" ? "BENİM KATKIM" : "MY CONTRIBUTION"}</div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="p-2 rounded-md bg-background/30">
+                    <div className="text-base font-bold text-accent">130K+</div>
+                    <div className="text-[8px] text-foreground/40 uppercase">{lang === "tr" ? "Satır Kod" : "Lines Code"}</div>
+                  </div>
+                  <div className="p-2 rounded-md bg-background/30">
+                    <div className="text-base font-bold text-primary">400+</div>
+                    <div className="text-[8px] text-foreground/40 uppercase">{lang === "tr" ? "API Endpoint" : "API Endpoints"}</div>
+                  </div>
+                  <div className="p-2 rounded-md bg-background/30">
+                    <div className="text-base font-bold text-purple-400">100+</div>
+                    <div className="text-[8px] text-foreground/40 uppercase">{lang === "tr" ? "DB Modeli" : "DB Models"}</div>
+                  </div>
+                  <div className="p-2 rounded-md bg-background/30">
+                    <div className="text-base font-bold text-emerald-400">8</div>
+                    <div className="text-[8px] text-foreground/40 uppercase">{lang === "tr" ? "Canlı Container" : "Live Containers"}</div>
+                  </div>
                 </div>
               </div>
             </div>

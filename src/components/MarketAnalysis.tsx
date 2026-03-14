@@ -224,8 +224,8 @@ export default function MarketAnalysis() {
             </div>
             <p className="text-xs text-foreground/40 leading-relaxed">
               {lang === "tr"
-                ? "Commencis LLM + İşBank İsCep ortaklığı, Türkiye'nin en büyük mobil bankacılık platformunu (14.5M kullanıcı) AI-native hale getiriyor. Benim 60+ AI ajan orkestrasyon deneyimim ve fraud analitik sistemlerim, bu LLM'in otonom müşteri hizmetleri, dolandırıcılık tespiti ve kişiselleştirilmiş bankacılık deneyimine genişletilmesinde doğrudan uygulanabilir."
-                : "Commencis LLM + IsBank IsCep partnership is making Turkey's largest mobile banking platform (14.5M users) AI-native. My 60+ AI agent orchestration experience and fraud analytics systems are directly applicable to extending this LLM into autonomous customer service, fraud detection, and personalized banking experiences."}
+                ? "Commencis LLM + İşBank İsCep ortaklığı, Türkiye'nin en büyük mobil bankacılık platformunu (14.5M kullanıcı) AI-native hale getiriyor. Benim 130K+ satır production kodu, 6 otonom ajan sistemi (ödeme doğrulama, envanter, workflow orkestrasyon) ve ML güvenlik deneyimim, bu LLM'in otonom müşteri hizmetleri, dolandırıcılık tespiti ve kişiselleştirilmiş bankacılık deneyimine genişletilmesinde doğrudan uygulanabilir."
+                : "Commencis LLM + IsBank IsCep partnership is making Turkey's largest mobile banking platform (14.5M users) AI-native. My 130K+ lines of production code, 6 autonomous agent systems (payment verification, inventory, workflow orchestration) and ML security experience are directly applicable to extending this LLM into autonomous customer service, fraud detection, and personalized banking experiences."}
             </p>
           </div>
         </motion.div>

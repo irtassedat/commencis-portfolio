@@ -1,12 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import GitHubProjects from "@/components/GitHubProjects";
+import TechStack from "@/components/TechStack";
+import LiveDemo from "@/components/LiveDemo";
 import About from "@/components/About";
 import TurkerlerVision from "@/components/TurkerlerVision";
-import MarketAnalysis from "@/components/MarketAnalysis";
-import EnergyArchitecture from "@/components/EnergyArchitecture";
-import GitHubProjects from "@/components/GitHubProjects";
-import LiveDemo from "@/components/LiveDemo";
-import TechStack from "@/components/TechStack";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AiChat from "@/components/AiChat";
@@ -42,13 +40,11 @@ export default async function Home() {
     <main className="min-h-screen bg-background">
       <Navbar />
       <Hero />
-      <About />
-      <TurkerlerVision />
-      <MarketAnalysis />
-      <EnergyArchitecture />
-      <LiveDemo />
       <GitHubProjects repos={repos} profile={profile} />
       <TechStack />
+      <LiveDemo />
+      <About />
+      <TurkerlerVision />
       <Contact />
       <Footer />
       <AiChat />

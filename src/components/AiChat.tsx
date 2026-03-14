@@ -12,15 +12,15 @@ interface QA {
 const qaTr: QA[] = [
   {
     question: "Ben Kimim?",
-    answer: "Sedat İrtaş — Endüstri Mühendisi & Full-Stack AI Developer. 2024'te endüstri mühendisliği mezuniyetim ve Workintech Full-Stack Bootcamp'i tamamladım. Veri analitiği ve süreç optimizasyonu altyapımı yazılımla birleştirerek 13+ üretim projesi, 60+ AI ajan orkestrasyonu, Telegram otomasyon botları, fraud analitik sistemleri ve VPS otomasyon platformları kurdum. Endüstri mühendisliğinin analitik yaklaşımıyla Commencis'in agentic AI vizyonuna tam uyumlu bir profil sunuyorum."
+    answer: "Sedat İrtaş — Endüstri Mühendisi & Full-Stack AI Developer. 2023 sonunda Workintech bootcamp ile yazılıma başladım, 2024'te endüstri mühendisliği mezuniyetimin ardından tam odaklandım. 2+ yılda: 130K+ satır production kodu, 400+ API endpoint, 100+ veritabanı modeli, 15+ otonom bot, 6 otonom ajan sistemi. VPS üzerinde 8 canlı Docker container yönetiyorum. Yandex'te #1 organik sıralama."
   },
   {
     question: "Commencis'e Ne Katabilirim?",
-    answer: "Somut katkılarım: 1) Agentic AI — 60+ AI ajan orkestre ettim, Commencis LLM'i otonom iş süreçlerine taşıyabilirim. Fraud tespiti, müşteri segmentasyonu, otomatik raporlama. 2) Full-Stack Platform — 176+ endpoint'li multi-tenant SaaS geliştirdim, İşBank İsCep gibi projelerin backend'ine katkı sağlarım. 3) Otomasyon — 15+ Telegram bot ve 12+ VPS sunucu otomasyonu ile Commencis'in iç süreçlerini hızlandırabilirim. 4) Endüstri Mühendisliği — Veri analitiği ve süreç optimizasyonu perspektifim, sadece kod yazmak değil, iş süreçlerini de optimize etmemi sağlar."
+    answer: "Somut katkılarım: 1) Otonom Ajan Sistemleri — 6 otonom ajan (ödeme doğrulama, envanter, workflow orkestrasyon) geliştirdim, Commencis LLM'i otonom iş süreçlerine taşıyabilirim. 2) Full-Stack Platform — 400+ endpoint'li çoklu platform geliştirdim, İşBank İsCep gibi projelerin backend'ine katkı sağlarım. 3) Bot & Otomasyon — 15+ Telegram bot, FastAPI dashboard, real-time SSE monitoring ile Commencis'in iç süreçlerini hızlandırabilirim. 4) Endüstri Mühendisliği — Veri analitiği ve süreç optimizasyonu perspektifim, sadece kod yazmak değil, iş süreçlerini de optimize etmemi sağlar."
   },
   {
     question: "Öne Çıkan Projelerim?",
-    answer: "• VPS Yönetim Platformu — 12+ sunucu üzerinde tam otomasyon, deployment, monitoring\n• Telegram Bot Ekosistemi — 15+ otomasyon botu: bildirim, veri toplama, raporlama, müşteri etkileşimi\n• Fraud Analitik Sistemi — Gerçek zamanlı anomali tespiti, pattern matching, risk skorlama motoru\n• Multi-Tenant QR Menü — 8+ marka, 176+ API endpoint, RBAC güvenlik\n• AI Ajan Orkestrasyon — 60+ uzman ajan koordinasyonu, görev dağılımı, sonuç birleştirme\n• E-Ticaret Platform — React + Spring Boot, ürün katalog, sipariş yönetimi"
+    answer: "• Topluluk Platformu — 64,900 satır, Fastify 5 + Next.js 15, 29 Prisma modeli, 164 endpoint, 5 Docker, gamifikasyon, SEO otomasyon, Yandex #1\n• Lojistik Monorepo — 34,600 satır, pnpm 5 paket, 25 Prisma modeli, 6 otonom ajan, multi-chain ödeme, 7 Docker\n• Bot & AI Ekosistemi — 15,000+ satır Python, 74 modül, Gemini AI, ML güvenlik, adaptive intelligence, 4 Docker\n• QR Menü SaaS — 12,685 satır, 184 endpoint, 46 tablo, RBAC, sadakat programı. Canlı: qr.sebastianlogic.com\n• E-Ticaret — React + Spring Boot, ürün katalog, sipariş yönetimi\n• 7 Portfolyo Sitesi — Next.js + TypeScript, Vercel'de canlı"
   },
   {
     question: "Teknik Yetkinliklerim?",
@@ -35,15 +35,15 @@ const qaTr: QA[] = [
 const qaEn: QA[] = [
   {
     question: "Who Am I?",
-    answer: "Sedat Irtas — Industrial Engineer & Full-Stack AI Developer. Graduated in Industrial Engineering and completed Workintech Full-Stack Bootcamp in 2024. Combining data analytics and process optimization background with software to build 13+ production projects, 60+ AI agent orchestrations, Telegram automation bots, fraud analytics systems, and VPS automation platforms. Offering a profile that merges industrial engineering's analytical approach with Commencis's agentic AI vision."
+    answer: "Sedat Irtas — Industrial Engineer & Full-Stack AI Developer. Started software with Workintech bootcamp in late 2023, fully committed after graduating in Industrial Engineering in 2024. In 2+ years: 130K+ lines of production code, 400+ API endpoints, 100+ database models, 15+ autonomous bots, 6 autonomous agent systems. Managing 8 live Docker containers on VPS. #1 organic ranking on Yandex."
   },
   {
     question: "What Can I Bring to Commencis?",
-    answer: "Concrete contributions: 1) Agentic AI — Orchestrated 60+ AI agents, can extend Commencis LLM to autonomous workflows. Fraud detection, customer segmentation, automated reporting. 2) Full-Stack Platform — Built multi-tenant SaaS with 176+ endpoints, can contribute to backends like IsBank IsCep. 3) Automation — 15+ Telegram bots and 12+ VPS server automation to accelerate Commencis's internal processes. 4) Industrial Engineering — Data analytics and process optimization perspective enables me to optimize business processes, not just write code."
+    answer: "Concrete contributions: 1) Autonomous Agent Systems — Built 6 autonomous agents (payment verification, inventory, workflow orchestration), can extend Commencis LLM into autonomous workflows. 2) Full-Stack Platform — Built platforms with 400+ endpoints total, can contribute to backends like IsBank IsCep. 3) Bot & Automation — 15+ Telegram bots, FastAPI dashboard, real-time SSE monitoring to accelerate Commencis's internal processes. 4) Industrial Engineering — Data analytics and process optimization perspective enables me to optimize business processes, not just write code."
   },
   {
     question: "Featured Projects?",
-    answer: "• VPS Management Platform — Full automation across 12+ servers: deployment, monitoring\n• Telegram Bot Ecosystem — 15+ automation bots: notifications, data collection, reporting, engagement\n• Fraud Analytics System — Real-time anomaly detection, pattern matching, risk scoring engine\n• Multi-Tenant QR Menu — 8+ brands, 176+ API endpoints, RBAC security\n• AI Agent Orchestration — 60+ specialist agent coordination, task distribution, result aggregation\n• E-Commerce Platform — React + Spring Boot, product catalog, order management"
+    answer: "• Community Platform — 64,900 lines, Fastify 5 + Next.js 15, 29 Prisma models, 164 endpoints, 5 Docker, gamification, SEO automation, Yandex #1\n• Logistics Monorepo — 34,600 lines, pnpm 5 packages, 25 Prisma models, 6 autonomous agents, multi-chain payments, 7 Docker\n• Bot & AI Ecosystem — 15,000+ lines Python, 74 modules, Gemini AI, ML security, adaptive intelligence, 4 Docker\n• QR Menu SaaS — 12,685 lines, 184 endpoints, 46 tables, RBAC, loyalty program. Live: qr.sebastianlogic.com\n• E-Commerce — React + Spring Boot, product catalog, order management\n• 7 Portfolio Sites — Next.js + TypeScript, live on Vercel"
   },
   {
     question: "Technical Skills?",
