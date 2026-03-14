@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import GitHubProjects from "@/components/GitHubProjects";
 import TechStack from "@/components/TechStack";
-import DeepAnalysisCTA from "@/components/DeepAnalysisCTA";
 import TurkerlerVision from "@/components/TurkerlerVision";
 import LiveDemo from "@/components/LiveDemo";
 import About from "@/components/About";
@@ -38,18 +37,21 @@ export default async function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-background">
-      <Navbar />
-      <Hero />
-      <GitHubProjects repos={repos} profile={profile} />
+    <>
+      {/* Global floating tech word background — fixed, behind everything */}
       <TechStack />
-      <DeepAnalysisCTA />
-      <TurkerlerVision />
-      <LiveDemo />
-      <About />
-      <Contact />
-      <Footer />
-      <AiChat />
-    </main>
+
+      <main className="relative z-10 min-h-screen bg-background">
+        <Navbar />
+        <Hero />
+        <LiveDemo />
+        <GitHubProjects repos={repos} profile={profile} />
+        <TurkerlerVision />
+        <About />
+        <Contact />
+        <Footer />
+        <AiChat />
+      </main>
+    </>
   );
 }

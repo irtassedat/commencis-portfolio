@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useLang } from "@/lib/i18n";
 
 const reasonsTr = [
@@ -106,6 +107,23 @@ export default function TurkerlerVision() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-8 text-center"
+        >
+          <Link
+            href="/deep-analysis"
+            className="text-xs font-mono text-foreground/30 hover:text-primary/70 transition-colors tracking-wide"
+          >
+            {lang === "tr"
+              ? "Detaylı analiz →"
+              : "Detailed analysis →"}
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

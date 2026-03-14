@@ -1,8 +1,40 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import { getLanguageColor, type GitHubRepo, type GitHubProfile } from "@/lib/github";
 import { useLang } from "@/lib/i18n";
+
+function TypewriterText({ text }: { text: string }) {
+  const [displayed, setDisplayed] = useState("");
+  const [done, setDone] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
+
+  useEffect(() => {
+    if (!inView || done) return;
+    let i = 0;
+    setDisplayed("");
+    const id = setInterval(() => {
+      i += 1;
+      setDisplayed(text.slice(0, i));
+      if (i >= text.length) {
+        clearInterval(id);
+        setDone(true);
+      }
+    }, 15);
+    return () => clearInterval(id);
+  }, [inView, text, done]);
+
+  return (
+    <span ref={ref}>
+      {done ? text : displayed}
+      {!done && inView && (
+        <span className="inline-block w-px h-3 bg-foreground/40 ml-0.5 animate-pulse" />
+      )}
+    </span>
+  );
+}
 
 interface Props {
   repos: GitHubRepo[];
@@ -210,7 +242,7 @@ export default function GitHubProjects({ repos, profile }: Props) {
                 </span>
               </div>
               <p className="text-xs text-foreground/40 leading-relaxed mb-3">
-                {item.desc}
+                <TypewriterText text={item.desc} />
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {achievementTags[i].map((tag) => (
