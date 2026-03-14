@@ -108,22 +108,68 @@ export default function TurkerlerVision() {
           ))}
         </div>
 
+        {/* Deep Analysis CTA — full-width, animated, unmissable */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-8 text-center"
+          transition={{ delay: 0.35, duration: 0.5, type: "spring", bounce: 0.3 }}
+          className="mt-10"
         >
           <Link
             href="/deep-analysis"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary/20 bg-primary/5 hover:bg-primary/10 hover:border-primary/40 transition-all text-xs font-medium text-primary"
+            className="group relative block w-full overflow-hidden rounded-2xl border border-[#6366f1]/30 hover:border-[#6366f1]/60 transition-all duration-300"
+            style={{
+              background: "linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(139,92,246,0.12) 50%, rgba(14,165,233,0.08) 100%)",
+              boxShadow: "0 0 30px rgba(99,102,241,0.15), 0 0 60px rgba(139,92,246,0.05)",
+            }}
           >
-            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-            {lang === "tr"
-              ? "Proje detayları, yetkinlik uyumu & sektör araştırması"
-              : "Project details, skills alignment & industry research"}
-            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            {/* Animated shimmer sweep */}
+            <div
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              style={{
+                background: "linear-gradient(105deg, transparent 40%, rgba(99,102,241,0.15) 50%, transparent 60%)",
+                backgroundSize: "200% 100%",
+                animation: "shimmer 2s infinite",
+              }}
+            />
+
+            {/* Glow pulse on the left edge */}
+            <div className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl bg-gradient-to-b from-[#6366f1] via-[#8b5cf6] to-[#0ea5e9] animate-pulse-slow" />
+
+            <div className="relative flex items-center justify-between gap-4 px-6 py-5 sm:px-8 sm:py-6">
+              <div className="flex items-center gap-4 min-w-0">
+                {/* Icon with glow */}
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] flex items-center justify-center shadow-[0_0_20px_rgba(99,102,241,0.4)]">
+                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div className="min-w-0">
+                  <p className="text-sm sm:text-base font-semibold text-foreground/95">
+                    {lang === "tr"
+                      ? "Derin Analiz — Teknik Detaylar & Uyum Raporu"
+                      : "Deep Analysis — Technical Details & Fit Report"}
+                  </p>
+                  <p className="text-xs sm:text-sm text-foreground/50 mt-0.5">
+                    {lang === "tr"
+                      ? "Proje detayları, yetkinlik uyumu, mimari kararlar & sektör araştırması"
+                      : "Project details, skills alignment, architecture decisions & industry research"}
+                  </p>
+                </div>
+              </div>
+
+              {/* Arrow with bounce animation */}
+              <motion.div
+                animate={{ x: [0, 6, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                className="flex-shrink-0"
+              >
+                <svg className="w-5 h-5 text-[#6366f1] group-hover:text-[#8b5cf6] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </motion.div>
+            </div>
           </Link>
         </motion.div>
       </div>

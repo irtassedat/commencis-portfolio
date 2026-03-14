@@ -75,6 +75,7 @@ html.light .bg-grid {
   background-image: linear-gradient(var(--surface), var(--surface)), linear-gradient(135deg, #6366f1, #8b5cf6, #0ea5e9);
 }
 
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
 @keyframes pulse-slow { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
 @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
 @keyframes energy-flow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
