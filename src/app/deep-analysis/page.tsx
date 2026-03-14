@@ -262,6 +262,12 @@ const problemsTr = [
     solutions: ["Commencis LLM — Türkçe doğruluk 9.8/10", "Sektör-spesifik fine-tuning", "On-premise deployment ile regülasyon uyumu"],
     myRole: "6 otonom ajan ve ML güvenlik deneyimimle LLM'in agentic AI'a genişletilmesinde — otonom müşteri hizmetleri, dolandırıcılık tespiti — doğrudan rol alabilirim.",
   },
+  {
+    area: "Cloud Göçü & DevOps Olgunluğu", icon: "\u2601\uFE0F", severity: "Yüksek",
+    problems: ["Türk şirketlerinin %60'ı hala on-premise", "CI/CD pipeline eksikliği — manuel deploy", "Container orkestrasyon bilgi açığı"],
+    solutions: ["Commencis AWS Premier Partner altyapısı", "Infrastructure as Code ile otomasyon", "Kubernetes/Docker ile microservice migrasyonu"],
+    myRole: "8 canlı Docker container yöneten, PostgreSQL/Redis/Nginx altyapısı kuran DevOps deneyimimle cloud migration ve container orkestrasyon süreçlerine doğrudan katkı sağlayabilirim.",
+  },
 ];
 
 const problemsEn = [
@@ -276,6 +282,12 @@ const problemsEn = [
     problems: ["Global LLMs underperform in Turkish", "No Turkish AI for banking terminology", "KVKK/BDDK data sovereignty requirements"],
     solutions: ["Commencis LLM — Turkish accuracy 9.8/10", "Sector-specific fine-tuning", "On-premise deployment for regulatory compliance"],
     myRole: "With my 6 autonomous agents and ML security experience, I can directly contribute to extending the LLM into agentic AI — autonomous customer service, fraud detection.",
+  },
+  {
+    area: "Cloud Migration & DevOps Maturity", icon: "\u2601\uFE0F", severity: "High",
+    problems: ["60% of Turkish companies still on-premise", "Lack of CI/CD pipelines — manual deployments", "Container orchestration knowledge gap"],
+    solutions: ["Commencis AWS Premier Partner infrastructure", "Automation with Infrastructure as Code", "Microservice migration with Kubernetes/Docker"],
+    myRole: "With my DevOps experience managing 8 live Docker containers and building PostgreSQL/Redis/Nginx infrastructure, I can directly contribute to cloud migration and container orchestration processes.",
   },
 ];
 

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import { useLang } from "@/lib/i18n";
 
 function GridBackground() {
@@ -124,6 +125,56 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
+
+              {/* Sektör Sorunları — compact, clickable */}
+              <Link href="/deep-analysis" className="group block mt-3">
+                <div className="p-4 rounded-lg bg-gradient-to-br from-red-500/5 via-surface/60 to-indigo-500/5 border border-border/30 hover:border-primary/30 transition-all">
+                  <div className="flex items-center justify-between mb-2.5">
+                    <div className="text-[9px] text-red-400/70 uppercase tracking-wider font-bold">
+                      {lang === "tr" ? "SEKTÖR SORUNLARI & ÇÖZÜMLERİM" : "INDUSTRY PROBLEMS & MY SOLUTIONS"}
+                    </div>
+                    <motion.svg
+                      animate={{ x: [0, 4, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                      className="w-3.5 h-3.5 text-primary/50 group-hover:text-primary transition-colors"
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </motion.svg>
+                  </div>
+                  <div className="space-y-2">
+                    {(lang === "tr"
+                      ? [
+                          { icon: "\uD83C\uDFE6", area: "Legacy Bankacılık", severity: "Kritik", solution: "API Gateway ile modernizasyon", color: "#ef4444" },
+                          { icon: "\uD83E\uDDE0", area: "Türkçe NLP Boşluğu", severity: "Kritik", solution: "Commencis LLM → Agentic AI", color: "#6366f1" },
+                          { icon: "\u2601\uFE0F", area: "Cloud Göçü", severity: "Yüksek", solution: "AWS altyapı & DevOps", color: "#0ea5e9" },
+                        ]
+                      : [
+                          { icon: "\uD83C\uDFE6", area: "Legacy Banking", severity: "Critical", solution: "API Gateway modernization", color: "#ef4444" },
+                          { icon: "\uD83E\uDDE0", area: "Turkish NLP Gap", severity: "Critical", solution: "Commencis LLM → Agentic AI", color: "#6366f1" },
+                          { icon: "\u2601\uFE0F", area: "Cloud Migration", severity: "High", solution: "AWS infra & DevOps", color: "#0ea5e9" },
+                        ]
+                    ).map((item) => (
+                      <div key={item.area} className="flex items-center gap-2 p-2 rounded-md bg-background/40 border border-border/20 group-hover:border-border/40 transition-colors">
+                        <span className="text-sm shrink-0">{item.icon}</span>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-[10px] font-semibold text-foreground/70 truncate">{item.area}</span>
+                            <span className="text-[8px] px-1.5 py-0.5 rounded-full shrink-0" style={{ backgroundColor: item.color + "15", color: item.color }}>
+                              {item.severity}
+                            </span>
+                          </div>
+                          <div className="text-[9px] text-foreground/35 truncate">{item.solution}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-2.5 flex items-center justify-center gap-1 text-[10px] text-primary/60 group-hover:text-primary transition-colors font-medium">
+                    {lang === "tr" ? "Detaylı analiz & çözüm önerilerim" : "Detailed analysis & my solution proposals"}
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                  </div>
+                </div>
+              </Link>
             </div>
             <div className="mt-3 flex items-center justify-end gap-2 text-[9px] text-foreground/15"><span>{t.hero.data.source}</span></div>
           </motion.div>
