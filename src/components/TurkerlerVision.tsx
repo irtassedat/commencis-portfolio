@@ -108,67 +108,95 @@ export default function TurkerlerVision() {
           ))}
         </div>
 
-        {/* Deep Analysis CTA — full-width, animated, unmissable */}
+        {/* Deep Analysis CTA — impossible to miss */}
         <motion.div
-          initial={{ opacity: 0, y: 20, scale: 0.95 }}
+          initial={{ opacity: 0, y: 30, scale: 0.9 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.35, duration: 0.5, type: "spring", bounce: 0.3 }}
-          className="mt-10"
+          transition={{ delay: 0.3, duration: 0.6, type: "spring", bounce: 0.35 }}
+          className="mt-12"
         >
           <Link
             href="/deep-analysis"
-            className="group relative block w-full overflow-hidden rounded-2xl border border-[#6366f1]/30 hover:border-[#6366f1]/60 transition-all duration-300"
-            style={{
-              background: "linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(139,92,246,0.12) 50%, rgba(14,165,233,0.08) 100%)",
-              boxShadow: "0 0 30px rgba(99,102,241,0.15), 0 0 60px rgba(139,92,246,0.05)",
-            }}
+            className="group relative block w-full overflow-hidden rounded-2xl transition-all duration-300 cta-glow"
           >
-            {/* Animated shimmer sweep */}
+            {/* Animated gradient border */}
+            <div className="absolute inset-0 rounded-2xl p-[1.5px] cta-border-spin">
+              <div className="absolute inset-0 rounded-2xl" style={{ background: "conic-gradient(from var(--cta-angle, 0deg), #6366f1, #8b5cf6, #0ea5e9, #6366f1)" }} />
+            </div>
+
+            {/* Inner background */}
             <div
-              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{
-                background: "linear-gradient(105deg, transparent 40%, rgba(99,102,241,0.15) 50%, transparent 60%)",
-                backgroundSize: "200% 100%",
-                animation: "shimmer 2s infinite",
-              }}
-            />
+              className="relative rounded-2xl m-[1.5px]"
+              style={{ background: "linear-gradient(135deg, rgba(99,102,241,0.15) 0%, rgba(15,15,35,0.95) 30%, rgba(15,15,35,0.95) 70%, rgba(139,92,246,0.15) 100%)" }}
+            >
+              {/* Always-on shimmer sweep */}
+              <div
+                className="absolute inset-0 rounded-2xl"
+                style={{
+                  background: "linear-gradient(105deg, transparent 35%, rgba(99,102,241,0.12) 45%, rgba(139,92,246,0.08) 55%, transparent 65%)",
+                  backgroundSize: "300% 100%",
+                  animation: "shimmer 3s ease-in-out infinite",
+                }}
+              />
 
-            {/* Glow pulse on the left edge */}
-            <div className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl bg-gradient-to-b from-[#6366f1] via-[#8b5cf6] to-[#0ea5e9] animate-pulse-slow" />
+              <div className="relative px-6 py-6 sm:px-8 sm:py-7">
+                {/* Top row: icon + title + arrow */}
+                <div className="flex items-center justify-between gap-4 mb-4">
+                  <div className="flex items-center gap-4 min-w-0">
+                    <motion.div
+                      animate={{ scale: [1, 1.08, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] flex items-center justify-center shadow-[0_0_24px_rgba(99,102,241,0.5)]"
+                    >
+                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                    </motion.div>
+                    <div className="min-w-0">
+                      <p className="text-base sm:text-lg font-bold text-white">
+                        {lang === "tr"
+                          ? "Derin Analiz Raporu"
+                          : "Deep Analysis Report"}
+                      </p>
+                      <p className="text-xs sm:text-sm text-foreground/50 mt-0.5">
+                        {lang === "tr"
+                          ? "Teknik detaylar, mimari kararlar & Commencis uyum analizi"
+                          : "Technical details, architecture decisions & Commencis fit analysis"}
+                      </p>
+                    </div>
+                  </div>
 
-            <div className="relative flex items-center justify-between gap-4 px-6 py-5 sm:px-8 sm:py-6">
-              <div className="flex items-center gap-4 min-w-0">
-                {/* Icon with glow */}
-                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] flex items-center justify-center shadow-[0_0_20px_rgba(99,102,241,0.4)]">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
+                  <motion.div
+                    animate={{ x: [0, 8, 0] }}
+                    transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+                    className="flex-shrink-0 w-10 h-10 rounded-full bg-[#6366f1]/20 flex items-center justify-center group-hover:bg-[#6366f1]/40 transition-colors"
+                  >
+                    <svg className="w-5 h-5 text-[#6366f1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </motion.div>
                 </div>
-                <div className="min-w-0">
-                  <p className="text-sm sm:text-base font-semibold text-foreground/95">
-                    {lang === "tr"
-                      ? "Derin Analiz — Teknik Detaylar & Uyum Raporu"
-                      : "Deep Analysis — Technical Details & Fit Report"}
-                  </p>
-                  <p className="text-xs sm:text-sm text-foreground/50 mt-0.5">
-                    {lang === "tr"
-                      ? "Proje detayları, yetkinlik uyumu, mimari kararlar & sektör araştırması"
-                      : "Project details, skills alignment, architecture decisions & industry research"}
-                  </p>
+
+                {/* Teaser stats — creates FOMO */}
+                <div className="flex flex-wrap gap-2">
+                  {(lang === "tr"
+                    ? ["5 Proje Detayı", "Yetkinlik Haritası", "Sektör Araştırması", "Mimari Analiz", "Büyüme Planı"]
+                    : ["5 Project Details", "Skills Map", "Industry Research", "Architecture Analysis", "Growth Plan"]
+                  ).map((tag, i) => (
+                    <motion.span
+                      key={tag}
+                      initial={{ opacity: 0, y: 8 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.5 + i * 0.06 }}
+                      className="text-[10px] sm:text-xs px-2.5 py-1 rounded-full bg-[#6366f1]/10 text-[#a5b4fc] border border-[#6366f1]/20"
+                    >
+                      {tag}
+                    </motion.span>
+                  ))}
                 </div>
               </div>
-
-              {/* Arrow with bounce animation */}
-              <motion.div
-                animate={{ x: [0, 6, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                className="flex-shrink-0"
-              >
-                <svg className="w-5 h-5 text-[#6366f1] group-hover:text-[#8b5cf6] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </motion.div>
             </div>
           </Link>
         </motion.div>

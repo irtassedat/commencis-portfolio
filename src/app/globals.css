@@ -85,3 +85,10 @@ html.light .bg-grid {
 .animate-energy-flow { background-size: 200% 200%; animation: energy-flow 3s ease infinite; }
 
 .particle-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+
+/* Deep Analysis CTA — spinning gradient border */
+@property --cta-angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@keyframes cta-spin { to { --cta-angle: 360deg; } }
+.cta-border-spin > div { background: conic-gradient(from var(--cta-angle), #6366f1, #8b5cf6, #0ea5e9, #6366f1); animation: cta-spin 4s linear infinite; }
+.cta-glow { box-shadow: 0 0 30px rgba(99,102,241,0.2), 0 0 60px rgba(139,92,246,0.1); animation: cta-glow-pulse 2.5s ease-in-out infinite; }
+@keyframes cta-glow-pulse { 0%, 100% { box-shadow: 0 0 30px rgba(99,102,241,0.2), 0 0 60px rgba(139,92,246,0.1); } 50% { box-shadow: 0 0 40px rgba(99,102,241,0.35), 0 0 80px rgba(139,92,246,0.15); } }
