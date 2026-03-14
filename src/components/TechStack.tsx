@@ -1,137 +1,117 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useLang } from "@/lib/i18n";
+import { useMemo } from "react";
 
-const categories = [
-  {
-    color: "#3b82f6",
-    techs: [
-      { name: "React", level: 90 },
-      { name: "Next.js", level: 85 },
-      { name: "TypeScript", level: 80 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "Vue.js", level: 70 },
-      { name: "Framer Motion", level: 75 },
-    ],
-  },
-  {
-    color: "#10b981",
-    techs: [
-      { name: "Node.js", level: 85 },
-      { name: "Java / Spring Boot", level: 75 },
-      { name: "Python", level: 70 },
-      { name: "PostgreSQL", level: 80 },
-      { name: "MongoDB", level: 75 },
-      { name: "REST API / GraphQL", level: 85 },
-    ],
-  },
-  {
-    color: "#8b5cf6",
-    techs: [
-      { name: "Claude API / SDK", level: 85 },
-      { name: "Otonom Ajanlar", level: 80 },
-      { name: "MCP Servers", level: 75 },
-      { name: "RAG Sistemleri", level: 70 },
-      { name: "Telegram Bot API", level: 90 },
-      { name: "Workflow Otomasyon", level: 80 },
-    ],
-  },
-  {
-    color: "#f59e0b",
-    techs: [
-      { name: "Docker", level: 80 },
-      { name: "AWS", level: 70 },
-      { name: "Vercel", level: 85 },
-      { name: "CI/CD Pipeline", level: 75 },
-      { name: "Git / GitHub", level: 90 },
-      { name: "Linux", level: 75 },
-    ],
-  },
+const techWords = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Tailwind CSS",
+  "Vue.js",
+  "Framer Motion",
+  "Node.js",
+  "Java",
+  "Spring Boot",
+  "Python",
+  "PostgreSQL",
+  "MongoDB",
+  "GraphQL",
+  "REST API",
+  "Claude API",
+  "MCP Servers",
+  "RAG",
+  "Agentic AI",
+  "Telegram Bot",
+  "Workflow",
+  "Docker",
+  "AWS",
+  "Vercel",
+  "CI/CD",
+  "Git",
+  "Linux",
+  "Redis",
+  "Nginx",
+  "Fastify",
+  "Prisma",
+  "Gemini AI",
+  "FastAPI",
+  "Kubernetes",
+  "Cloudflare",
 ];
 
+// Deterministic pseudo-random based on index — no hydration mismatch
+function seededValue(seed: number, offset: number): number {
+  const x = Math.sin(seed * 9301 + offset * 49297 + 233) * 10000;
+  return x - Math.floor(x);
+}
+
+interface WordItem {
+  text: string;
+  x: number; // percent
+  y: number; // percent
+  size: number; // rem
+  opacity: number;
+  duration: number;
+  delay: number;
+  driftX: number;
+  driftY: number;
+}
+
 export default function TechStack() {
-  const { t } = useLang();
+  const words: WordItem[] = useMemo(() => {
+    return techWords.map((text, i) => ({
+      text,
+      x: seededValue(i, 1) * 90 + 5,
+      y: seededValue(i, 2) * 85 + 5,
+      size: seededValue(i, 3) * 0.8 + 0.7, // 0.7–1.5rem
+      opacity: seededValue(i, 4) * 0.08 + 0.06, // 6–14%
+      duration: seededValue(i, 5) * 12 + 14, // 14–26s
+      delay: seededValue(i, 6) * -20,
+      driftX: (seededValue(i, 7) - 0.5) * 40, // -20 to +20px
+      driftY: (seededValue(i, 8) - 0.5) * 30, // -15 to +15px
+    }));
+  }, []);
 
   return (
-    <section id="tech" className="py-24 px-4 relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+    <section id="tech" className="relative py-16 overflow-hidden" style={{ minHeight: "260px" }}>
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <span className="text-sm font-mono text-primary">
-            {t.tech.section}
+      {/* Floating tech word cloud */}
+      <div className="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
+        {words.map((w) => (
+          <motion.span
+            key={w.text}
+            className="absolute font-mono font-medium text-foreground whitespace-nowrap"
+            style={{
+              left: `${w.x}%`,
+              top: `${w.y}%`,
+              fontSize: `${w.size}rem`,
+              opacity: w.opacity,
+            }}
+            animate={{
+              x: [0, w.driftX, 0, -w.driftX * 0.5, 0],
+              y: [0, w.driftY, -w.driftY * 0.6, w.driftY * 0.3, 0],
+            }}
+            transition={{
+              duration: w.duration,
+              delay: w.delay,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            {w.text}
+          </motion.span>
+        ))}
+      </div>
+
+      {/* Centered label — minimal, tasteful */}
+      <div className="relative z-10 flex items-center justify-center h-full py-10">
+        <div className="text-center">
+          <span className="text-xs font-mono text-foreground/25 tracking-[0.3em] uppercase">
+            // tech stack
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold mt-3">
-            {t.tech.titleA}
-            <span className="text-gradient">{t.tech.titleB}</span>
-          </h2>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {categories.map((cat, catIndex) => {
-            const title = t.tech.categories[catIndex];
-            return (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: catIndex * 0.1 }}
-                className="p-6 rounded-xl bg-surface border border-border"
-              >
-                <div className="flex items-center gap-2 mb-5">
-                  <div
-                    className="w-2 h-2 rounded-full"
-                    style={{ backgroundColor: cat.color }}
-                  />
-                  <h3 className="font-bold" style={{ color: cat.color }}>
-                    {title}
-                  </h3>
-                </div>
-
-                <div className="space-y-4">
-                  {cat.techs.map((tech, i) => (
-                    <motion.div
-                      key={tech.name}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: catIndex * 0.1 + i * 0.05 }}
-                    >
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm">{tech.name}</span>
-                        <span className="text-xs text-foreground/40">
-                          {tech.level}%
-                        </span>
-                      </div>
-                      <div className="h-1.5 bg-surface-light rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${tech.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{
-                            duration: 1,
-                            delay: catIndex * 0.1 + i * 0.05,
-                            ease: "easeOut",
-                          }}
-                          className="h-full rounded-full"
-                          style={{
-                            background: `linear-gradient(to right, ${cat.color}80, ${cat.color})`,
-                          }}
-                        />
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            );
-          })}
         </div>
       </div>
     </section>

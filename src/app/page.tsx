@@ -2,9 +2,10 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import GitHubProjects from "@/components/GitHubProjects";
 import TechStack from "@/components/TechStack";
+import DeepAnalysisCTA from "@/components/DeepAnalysisCTA";
+import TurkerlerVision from "@/components/TurkerlerVision";
 import LiveDemo from "@/components/LiveDemo";
 import About from "@/components/About";
-import TurkerlerVision from "@/components/TurkerlerVision";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AiChat from "@/components/AiChat";
@@ -42,9 +43,10 @@ export default async function Home() {
       <Hero />
       <GitHubProjects repos={repos} profile={profile} />
       <TechStack />
+      <DeepAnalysisCTA />
+      <TurkerlerVision />
       <LiveDemo />
       <About />
-      <TurkerlerVision />
       <Contact />
       <Footer />
       <AiChat />
